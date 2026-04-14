@@ -1,0 +1,457 @@
+\section{Standing regime, quotient closure, and the unique admissible interior}
+\label{sec:standing-regime}
+
+This section completes the first full interior-closure layer of the capstone. Section~\ref{sec:ametric-boundary} already removed every admissibility-relevant selector, order, grading, metric, and deeper invariant from the proposal side. What remains is the positive side itself: once the boundary is already binary, non-eventful, and non-parameterized, what same-scope structure is left on the admitted side? The answer is exact. Gate existence is forced; competing same-scope gates collapse; standing is reuse-stable admissibility rather than an extra classifier; no repair, generator, or carrier route survives; every admissibility-preserving standing presentation factors through one standing quotient; no stricter same-scope standing-bearing refinement survives beneath that quotient; and the admissible interior is unique up to lawful equivalence.\cite{MaleyNecessity,MaleyStandingEquivalence,MaleyExhaustion,MaleyTrajectory,MaleyUnus,MaleyATS}
+
+\subsection{Gate existence and unique same-scope classification}
+
+Once the proposal side is already stripped of selectors and parameterizations, the admitted side cannot remain indefinite. Some gate must exist, and it cannot bifurcate into rival same-scope classifications.
+
+\begin{definition}[Evaluated fragment and gate]
+Fix a typed same-scope domain $D$ with evaluated fragment $X_D^{\bullet}$. A \emph{gate predicate} on $D$ is a binary admissibility predicate
+\[
+\mathrm{Adm}_D : X_D^{\bullet} \to \{0,1\}
+\]
+intended to classify acts or states into eligible and ineligible members of the evaluated fragment.
+\end{definition}
+
+\begin{theorem}[Gate existence on the fixed scope]
+\label{thm:gate-existence-fixed-scope}
+If a fixed same-scope regime is intelligible, supports non-degenerate reasoning, and contains at least one irreversible commitment, then some gate predicate $\mathrm{Adm}_D$ is forced on the evaluated fragment.
+\end{theorem}
+
+\begin{proof}
+Assume toward contradiction that no gate predicate is instantiated on the evaluated fragment. Then there is no principled eligible/ineligible partition on which the regime can state that some acts are licit while others are irreversibly excluded. But an irreversible commitment regime requires exactly that: it must be able to state which acts are excluded and preserve that status under admissible continuation. If no gate exists, then either every evaluated act is treated as licit, in which case irreversible exclusion is void; or no evaluated act is eligible, in which case non-degenerate reasoning collapses; or eligibility varies silently by representation, in which case claim identity and evidential reference are not stable. Each branch contradicts the fixed-domain intelligibility and irreversibility package. Therefore some gate predicate is forced.\cite{MaleyNecessity,MaleyUnus}
+\end{proof}
+
+\begin{theorem}[Unique same-scope admissibility classification]
+\label{thm:unique-same-scope-classification}
+Let $\mathrm{Adm}_D$ and $\mathrm{Adm}'_D$ be two candidate same-scope gate predicates for the same typed domain $D$. Then they agree extensionally on $X_D^{\bullet}$.
+\end{theorem}
+
+\begin{proof}
+Assume toward contradiction that they disagree on some evaluated act $a$. Then one gate treats $a$ as admitted while the other treats it as not admitted on the same fixed scope. If both verdicts are allowed to stand, then standing on the fixed domain becomes indeterminate. If instead one tries to decide which gate governs $a$, that decision requires an admissibility-relevant differentiator selecting between the two gates. But Section~\ref{sec:ametric-boundary} already proved that the boundary is binary, non-eventful, and non-parameterized. So there is no admissibility-relevant selector by which two disagreeing same-scope gates can coexist. The disagreement is therefore impossible, and the two predicates must coincide extensionally.\cite{MaleyNecessity,MaleyUnus}
+\end{proof}
+
+\begin{corollary}[No competing same-scope gate]
+There is no second same-scope admissibility predicate that changes eligibility or standing on the evaluated fragment while preserving the fixed scope.
+\end{corollary}
+
+\begin{proof}
+Any such predicate would either disagree extensionally with the unique gate, which Theorem~\ref{thm:unique-same-scope-classification} rules out, or else merely rename it.
+\end{proof}
+
+\subsection{Standing emergence as reuse-stable admissibility}
+
+The next theorem does not derive standing from a lower layer. It identifies what standing is once the gate and the same-scope continuation discipline are already fixed.
+
+\begin{definition}[Reuse-stable admissibility]
+Let $D$ be fixed and let $a\in X_D^{\bullet}$. We say that $a$ is \emph{reuse-stably admissible} if
+\begin{enumerate}
+  \item $\mathrm{Adm}_D(a)=1$, and
+  \item every licensed same-scope continuation of $a$ preserves the standing-relevant invariant bundle --- equivalently, the standing-relevant tensor content --- that $a$ is supposed to carry on that scope.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Standing predicate at fixed scope]
+A \emph{standing predicate} on $D$ is any predicate
+\[
+\mathrm{Stand}_D : X_D^{\bullet} \to \{0,1\}
+\]
+claimed to mark exactly those evaluated acts that are eligible for standing-bearing continuation, commitment, or licensed reuse on the fixed domain.
+\end{definition}
+
+\begin{proposition}[Admitted same-scope continuation preserves the standing-relevant invariant bundle]
+\label{prop:admitted-continuation-preserves-bundle}
+If an evaluated act is admitted on a fixed domain and later reused under a licensed same-scope continuation, then that continuation preserves the standing-relevant members of the invariant bundle the act is supposed to carry.
+\end{proposition}
+
+\begin{proof}
+Suppose admitted same-scope continuation failed to preserve the relevant invariant bundle. Because the continuation is same-scope, no explicit reset or domain change has been declared. So either the continuation silently retargets the act while presenting it as continuation of the same standing-bearing content, violating stable reference, or it consults some hidden selector or criterion that changes what counts as relevant midstream. The latter would reintroduce hidden gate work forbidden by the AMetric boundary and no-parameterization theorems of Section~\ref{sec:ametric-boundary}. Hence admitted same-scope continuation preserves the standing-relevant invariant bundle.\cite{MaleyNecessity}
+\end{proof}
+
+\begin{theorem}[Standing emergence]
+\label{thm:standing-emergence}
+For every evaluated act $a\in X_D^{\bullet}$,
+\[
+\mathrm{Stand}_D(a)=1 \iff a \text{ is reuse-stably admissible on } D.
+\]
+Equivalently, standing is not an additional interface-level classifier beyond admissibility on a fixed scope. It is admissibility as preserved through licensed same-scope continuation.
+\end{theorem}
+
+\begin{proof}
+Suppose first that $\mathrm{Stand}_D(a)=1$. Because standing is claimed to govern eligibility for commitment and licensed reuse on the fixed scope, it is already an admissibility-relevant status. By Theorem~\ref{thm:unique-same-scope-classification}, no second gate remains on the same scope, so $a$ must be admitted. If $a$ were not reuse-stable, some licensed same-scope continuation would alter the invariant bundle while still counting as continuation of the same standing-bearing content, contradicting Proposition~\ref{prop:admitted-continuation-preserves-bundle}. Hence every standing-positive act is reuse-stably admissible.
+
+Conversely, suppose that $a$ is reuse-stably admissible. Then $\mathrm{Adm}_D(a)=1$ by definition. Suppose nevertheless that $\mathrm{Stand}_D(a)=0$. Since standing is supposed to govern commitment or later licensed continuation, this would split admitted acts into two substantive subclasses: those merely admitted and those admitted-with-standing. If the split affects what may later be done on the fixed scope, it is an admissibility-relevant same-side split on the positive side, forbidden by the binary interface theorems. If the split affects nothing, then it is inert bookkeeping and does not define a substantive standing predicate at all. So denying standing to a reuse-stably admissible act is impossible as a same-scope standing-bearing classification.\cite{MaleyNecessity}
+\end{proof}
+
+\begin{theorem}[Standing--admissibility equivalence]
+\label{thm:standing-admissibility-equivalence}
+For every evaluated act $a\in X_D^{\bullet}$,
+\[
+\mathrm{Stand}_D(a)=1 \iff \mathrm{Adm}_D(a)=1.
+\]
+Equivalently, there is no coherent same-scope regime in which admissibility is standing-neutral, standing is deferred past admissibility, or standing exists independently of admissibility.
+\end{theorem}
+
+\begin{proof}
+The forward implication is immediate from Theorem~\ref{thm:standing-emergence}: if $\mathrm{Stand}_D(a)=1$, then $a$ is reuse-stably admissible, and the first clause of reuse-stable admissibility is $\mathrm{Adm}_D(a)=1$.
+
+For the reverse implication, assume $\mathrm{Adm}_D(a)=1$ but $\mathrm{Stand}_D(a)=0$. Then admissibility and standing are being separated on the same fixed domain. By \standeqdoc{}, every non-equivalence regime must instantiate at least one of the following structural features: standing-neutral admissibility, deferred admissibility, admissibility reset, factorized governance, or illicit standing creation, suspension, or partition. But standing-neutral admissibility is already ruled out by Theorem~\ref{thm:standing-emergence}: once an act is admitted and reuse-stably admissible, no extra standing-positive layer remains to be conferred. Deferred admissibility and admissibility reset are ruled out by the irreversibility and no-repair package proved below. Factorized governance would require a second same-scope authorizer beyond the unique gate, which Theorem~\ref{thm:unique-same-scope-classification} forbids. Illicit standing creation or suspension is ruled out by the no-generators and no-carriers theorems proved below. So every non-equivalence route is blocked. Therefore $\mathrm{Adm}_D(a)=1$ implies $\mathrm{Stand}_D(a)=1$, and the equivalence follows.\cite{MaleyNecessity,MaleyStandingEquivalence}
+\end{proof}
+
+\begin{corollary}[Rejection of dual-track governance]
+\label{cor:no-dual-track-governance}
+Any same-scope distinction between ``formal admissibility'' and ``substantive standing'' is either inert bookkeeping or a prohibited second authorizer. In particular, admissibility without standing, standing without admissibility, and parallel governance bookkeeping are inadmissible on the fixed domain.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:standing-admissibility-equivalence}.\cite{MaleyStandingEquivalence}
+\end{proof}
+
+\begin{corollary}[Standing is lawful-redescription invariant]
+If $a\sim_D b$, then
+\[
+\mathrm{Stand}_D(a) \iff \mathrm{Stand}_D(b).
+\]
+\end{corollary}
+
+\begin{proof}
+Lawful redescription preserves admissibility and the standing-relevant invariant bundle. So it preserves reuse-stable admissibility, and Theorem~\ref{thm:standing-emergence} gives the result.\cite{MaleyNecessity}
+\end{proof}
+
+\subsection{No repairs, no generators, and no carriers}
+
+Once standing is identified with reuse-stable admissibility, every attempted positive-side ``repair'' must either change the act, add a new gate, or collapse to bookkeeping. The next three theorems isolate those impossibilities in the exact forms later sections will need.
+
+\begin{theorem}[No same-act repair]
+\label{thm:no-same-act-repair}
+Let $a\in X_D^{\bullet}$. If $\mathrm{Stand}_D(a)=0$, then no internal same-scope post-processing that still treats the output as the same evaluated act can yield $\mathrm{Stand}_D(a)=1$.
+\end{theorem}
+
+\begin{proof}
+Assume an internal same-scope step repairs $a$ while still treating the result as the same evaluated act. If the repair changes admissibility, then one has a same-scope promotion from ineligible to eligible for the same act, contradicting irreversibility. If the repair leaves admissibility unchanged but changes standing, then by Theorem~\ref{thm:standing-emergence} it changes reuse-stable admissibility. That can happen only by silently changing which invariant bundle the act is supposed to preserve or by declaring an undeclared reset. The first move violates same-scope identity and Proposition~\ref{prop:admitted-continuation-preserves-bundle}; the second is not same-act repair. So no internal same-scope post-processing can repair a standing-negative act as the same evaluated act.\cite{MaleyNecessity,MaleyUnus}
+\end{proof}
+
+\begin{theorem}[No generators]
+\label{thm:no-generators}
+There is no internal operation $T$ and no evaluated act $a\in X_D^{\bullet}$ with $\mathrm{Stand}_D(a)=0$ such that $\mathrm{Stand}_D(T(a))=1$ as a consequence of $a$ alone and without fresh evaluation on $D$.
+\end{theorem}
+
+\begin{proof}
+If $T(a)$ is still treated as the same evaluated act as $a$, then the claim is exactly same-act repair and is impossible by Theorem~\ref{thm:no-same-act-repair}. If $T(a)$ is treated as a distinct act, then its positive standing depends on fresh evaluation of that new act rather than on the prior failed standing of $a$ alone. So no generator exists.\cite{MaleyNecessity,MaleyUnus}
+\end{proof}
+
+\begin{definition}[Carrier attempt]
+A \emph{carrier attempt} on the fixed domain $D$ is any derived predicate $Q_D(a)$ proposed to authorize standing independently of the unique admissibility gate. Typical examples are scores, confidences, probabilities, losses, utilities, rankings, or structural invariants offered as primitive authorizers.
+\end{definition}
+
+\begin{lemma}[Any putatively independent authorizer induces gate work]
+\label{lem:independent-authorizer-induces-gate-work}
+If a predicate $Q_D$ is used as an independent authorizer to decide whether an evaluated act may enter standing-bearing continuation on $D$, then $Q_D$ performs gate work. It either changes which acts are admitted for licensed reuse or refines the admitted side into a further substantive eligibility partition.
+\end{lemma}
+
+\begin{proof}
+If $Q_D$ changes whether an act may enter standing-bearing continuation, then it directly changes eligibility. If instead every act admitted by $\mathrm{Adm}_D$ remains admitted but only some of them are counted by $Q_D$ as genuinely standing-positive, then $Q_D$ introduces a substantive same-side split among admitted acts. No third possibility exists.\cite{MaleyNecessity}
+\end{proof}
+
+\begin{theorem}[No independent carriers]
+\label{thm:no-independent-carriers}
+No carrier attempt $Q_D$ can serve as an independent authorizer of standing on the fixed domain except by coinciding extensionally with reuse-stable admissibility. Any admissible use of $Q_D$ is therefore downstream bookkeeping inside an already gated interior.
+\end{theorem}
+
+\begin{proof}
+Let $Q_D$ be a carrier attempt. By Lemma~\ref{lem:independent-authorizer-induces-gate-work}, if it is used as an independent authorizer then it performs gate work. If it changes who is admitted, it competes with the unique gate, contradicting Theorem~\ref{thm:unique-same-scope-classification}. If it leaves admission unchanged but refines the admitted side substantively, it creates an admissibility-relevant same-side split on the positive side, contradicting Theorem~\ref{thm:standing-admissibility-equivalence} together with the binary fixed-domain interface. The only remaining possibility is extensional coincidence with reuse-stable admissibility, in which case $Q_D$ is merely a renaming or bookkeeping layer.\cite{MaleyNecessity,MaleyUnus}
+\end{proof}
+
+\begin{corollary}[No primitive score, probability, or structural authorizer]
+No numeric threshold, confidence score, probability assignment, utility ranking, explanation score, or structural invariant may function as a primitive same-scope authorizer of standing.
+\end{corollary}
+
+\begin{proof}
+Each such proposal is a carrier attempt in the sense of the previous definition. Theorem~\ref{thm:no-independent-carriers} therefore excludes it unless it collapses extensionally to the unique gate, in which case it ceases to be an additional authorizer.\cite{MaleyNecessity,MaleyUnus}
+\end{proof}
+
+\subsubsection*{Inline proof anchor III: standing emergence, equivalence, and no carriers}
+
+The local hinge proved in \necessitydoc{} and then closed positively in \standeqdoc{} is that standing is not a second gate layered over admission. The forcing chain is finite.
+\begin{enumerate}
+  \item If $\mathrm{Stand}_D(a)=1$, then $a$ is already marked as eligible for standing-bearing continuation on the fixed scope. That status is admissibility-relevant. By Theorem~\ref{thm:unique-same-scope-classification}, no second gate remains available on the same scope, so $a$ must already satisfy $\mathrm{Adm}_D(a)=1$.
+  \item If a standing-positive act were not reuse-stable, some licensed same-scope continuation would alter the invariant bundle it is supposed to preserve while the act was still treated as the same standing-bearing content. That is silent retargeting or hidden selector work, and so is impossible by Proposition~\ref{prop:admitted-continuation-preserves-bundle}.
+  \item Conversely, if $a$ is reuse-stably admissible but $\mathrm{Stand}_D(a)=0$, then admitted acts split into two subclasses: merely admitted and admitted-with-standing. If that split affects later licensed use, it is a second positive-side classifier on the same scope; if it affects nothing, it is inert bookkeeping. Neither option yields a coherent same-scope standing predicate.
+  \item Once standing emergence is in place, every putative non-equivalence route between admissibility and standing must instantiate one of the residual dualism forms listed in \standeqdoc{}: standing-neutral admissibility, deferred admissibility, admissibility reset, factorized governance, or illicit standing creation/suspension. Each route is blocked by the fixed-domain closure package.
+  \item The carrier theorem is then immediate. A derived predicate $Q_D$ either changes who is admitted to standing-bearing continuation, in which case it competes with the unique gate, or it leaves admission unchanged but refines the admitted side into a further substantive partition, in which case it recreates the same-side split just eliminated. If it does neither, it is only bookkeeping. No fourth role remains.
+\end{enumerate}
+So the fixed-domain positive side is rigid: standing emerges as reuse-stable admissibility, admissibility and standing are equivalent, and every primitive score-, probability-, confidence-, or structure-based authorizer collapses either into a forbidden second gate or into bookkeeping inside an already gated interior.
+
+\subsection{Standing conservation and cross-domain non-portability}
+
+\begin{theorem}[Standing conservation]
+\label{thm:standing-conservation}
+For each fixed domain $D$, no internal same-scope operation creates, amplifies, transfers, or recovers standing. Standing can only be preserved or destroyed.
+\end{theorem}
+
+\begin{proof}
+Recovery is excluded by Theorem~\ref{thm:no-same-act-repair}. Creation from a failed act without fresh gating is excluded by Theorem~\ref{thm:no-generators}. Amplification would require standing to admit same-scope degrees beyond the binary gate/standing theorem family already fixed; that is impossible once standing is identified with reuse-stable admissibility. Transfer would require some predicate or structure to carry standing from one act or context to another independently of fresh gating, which is exactly an independent carrier and is therefore impossible by Theorem~\ref{thm:no-independent-carriers}. These four cases exhaust the standard ways of increasing standing.\cite{MaleyNecessity,MaleyUnus}
+\end{proof}
+
+\begin{corollary}[No cross-domain portability without fresh gating]
+Let $D_1$ and $D_2$ be distinct domains. Standing in $D_1$ does not by itself confer standing in $D_2$. Independent target gating on $D_2$ is required.
+\end{corollary}
+
+\begin{proof}
+Assume standing in $D_1$ automatically conferred standing in $D_2$ without fresh target gating. Then either the gate of $D_1$ would be reused to evaluate acts on $D_2$, which is an illicit scope transport, or some derived property of ``having standing in $D_1$'' would serve as an independent carrier on $D_2$. The first move violates fixed-scope discipline; the second is excluded by Theorem~\ref{thm:no-independent-carriers}. Hence independent target gating on $D_2$ is required.\cite{MaleyNecessity,MaleyUnus}
+\end{proof}
+
+\subsection{Standing quotient uniqueness and no stricter same-scope refinement}
+
+The admitted side is now rigid enough that every standing-bearing presentation must factor through a unique same-scope quotient. This is the earliest point at which the capstone may safely speak of quotient closure and no second same-scope standing-bearing invariant.
+
+\begin{definition}[Standing quotient]
+Fix a same-scope substrate with presentation carrier $P_D$ and standing-equivalence relation $\sim_D$, where
+\[
+p \sim_D p' \iff \mathrm{Ten}_D(p)=\mathrm{Ten}_D(p').
+\]
+The \emph{standing quotient} of the domain is
+\[
+\mathcal Q_D := P_D/\!\sim_D.
+\]
+Its classes represent exactly the same-scope standing-bearing tensor content of the domain.
+\end{definition}
+
+\begin{definition}[Standing presentation]
+A \emph{standing presentation} for $D$ is a triple $(Y,r,\mathrm{Pred}_Y)$ where $r:P_D\twoheadrightarrow Y$ is a surjection and every same-scope standing-bearing value factors through $r$. The presentation is \emph{complete} if $r(p)=r(p')$ implies $p\sim_D p'$, and \emph{sound} if $p\sim_D p'$ implies $r(p)=r(p')$.
+\end{definition}
+
+\begin{lemma}[Completeness of standing presentations]
+\label{lem:completeness-standing-presentation}
+Every standing presentation is complete.
+\end{lemma}
+
+\begin{proof}
+If $r(p)=r(p')$, then every standing-bearing value factors through the same point of $Y$, so for every admitted observable or same-scope test one has
+\[
+\mathrm{Pred}_D(h;p)=\mathrm{Pred}_Y(h;r(p))=\mathrm{Pred}_Y(h;r(p'))=\mathrm{Pred}_D(h;p').
+\]
+Hence $p$ and $p'$ agree on every same-scope standing-bearing consequence, i.e. $p\sim_D p'$.\cite{MaleyATS}
+\end{proof}
+
+\begin{lemma}[Soundness forced by stable reference and exhaustion]
+\label{lem:soundness-standing-presentation}
+Assume minimal coherence at the fixed scope. Then every standing presentation is sound.
+\end{lemma}
+
+\begin{proof}
+Suppose $p\sim_D p'$ but $r(p)\neq r(p')$. Then $Y$ distinguishes two putative standing states that already agree on tensor content and on every same-scope standing-bearing consequence. To keep that distinction as standing-bearing, one would need some additional admissible same-scope discriminator separating $r(p)$ from $r(p')$. But by the fixed-domain exhaustion and factorization results, no such same-scope discriminator exists beneath the quotient. So the extra distinction is unwitnessed representative privilege, i.e. skin treated as tensor load. That is inadmissible. Therefore $r(p)=r(p')$, and the presentation is sound.\cite{MaleyATS,MaleyExhaustion}
+\end{proof}
+
+\begin{theorem}[Standing-quotient uniqueness]
+\label{thm:standing-quotient-uniqueness}
+Let $(Y,r,\mathrm{Pred}_Y)$ be any same-scope standing presentation for $D$. Then $r$ is automatically sound and complete and induces a unique bijection
+\[
+\phi_D : \mathcal Q_D \longrightarrow Y, \qquad \phi_D([p])=r(p).
+\]
+In particular, the standing quotient $\mathcal Q_D$ is the unique same-scope standing-bearing content space for $D$, up to unique isomorphism.
+\end{theorem}
+
+\begin{proof}
+Completeness is Lemma~\ref{lem:completeness-standing-presentation}. Soundness is Lemma~\ref{lem:soundness-standing-presentation}. Define $\phi_D([p]):=r(p)$. Soundness implies that $\phi_D$ is well-defined. Completeness implies injectivity. Surjectivity holds because $r$ is surjective. Finally, uniqueness follows from the quotient universal property: any map constant on standing classes factors uniquely through the quotient map $q_D:P_D\to \mathcal Q_D$. Hence $r=\phi_D\circ q_D$, and the standing quotient is unique up to unique isomorphism.\cite{MaleyATS}
+\end{proof}
+
+\begin{corollary}[Skin non-authority]
+\label{cor:skin-non-authority}
+No admissible same-scope standing-bearing consequence can depend on a choice of representative inside a standing class. Equivalently, every admissible same-scope standing-bearing consequence factors uniquely through the standing quotient.
+\end{corollary}
+
+\begin{proof}
+Let $F:P_D\to Y$ be any admissible same-scope standing-bearing consequence functional. Lawful redescription neutrality implies that $F$ is constant on standing classes. So by the quotient universal property there exists a unique $\widetilde F:\mathcal Q_D\to Y$ with $F=\widetilde F\circ q_D$. Thus $F$ depends only on the quotient class $[p]$, not on the representative $p$ itself. So representative-only variation is skin and carries no same-scope authority.\cite{MaleyATS}
+\end{proof}
+
+\begin{theorem}[Same-scope factorization discipline]
+\label{thm:same-scope-factorization-discipline}
+Let $F$ be any same-scope standing-relevant discriminator, compatibility rule, consequence functional, or auxiliary presentation on the fixed domain $D$. Then $F$ is constant on standing-equivalence classes and factors uniquely through the standing quotient $\mathcal Q_D$. If $F$ fails to factor, then there exist $p,p'\in P_D$ with $p\sim_D p'$ but $F(p)\neq F(p')$; that witness is exactly a representative-only, metadata-level, or path-dependent discriminator and therefore cannot be admitted as same-scope standing-bearing authority.
+\end{theorem}
+
+\begin{proof}
+If $F$ is same-scope and standing-relevant, then by hypothesis it is supposed to affect admissible same-scope standing-bearing consequences. Corollary~\ref{cor:skin-non-authority} already states that every such consequence factors uniquely through the standing quotient. So $F$ must be constant on standing classes and hence factor through $\mathcal Q_D$.
+
+Suppose instead that $F$ fails to factor. Then there exist $p\sim_D p'$ with $F(p)\neq F(p')$. Because $p$ and $p'$ already determine the same standing class, the difference detected by $F$ is not carried by tensor content. The only remaining source of the distinction is representative-only, metadata-level, or path-dependent skin. But the fixed-domain typed-boundary discipline excludes any same-scope standing-relevant discriminator beyond the quotient-determined content. So non-factorization is not a legitimate same-scope refinement; it is illicit same-scope authority import.\cite{MaleyATS,MaleyExhaustion}
+\end{proof}
+
+\begin{theorem}[No stricter admissibility-preserving standing refinement]
+\label{thm:no-stricter-standing-refinement}
+Within the fixed substrate of the present capstone, there exists no stricter admissibility-preserving standing generator beneath tensor content. Equivalently, any admissibility-preserving auxiliary representation $(Y,I,\Phi)$ of standing satisfies
+\[
+\mathrm{Ten}_D(x)=\mathrm{Ten}_D(y) \implies \bigl(\Phi(I(x)) \iff \Phi(I(y))\bigr).
+\]
+Consequently, any admissibility-preserving attempt to derive standing from an auxiliary invariant collapses to tensor-determined bookkeeping and yields no deeper standing-bearing layer within this substrate.
+\end{theorem}
+
+\begin{proof}
+Let $(Y,I,\Phi)$ be an admissibility-preserving auxiliary representation of standing on the fixed substrate, and suppose that $\mathrm{Ten}_D(x)=\mathrm{Ten}_D(y)$. By definition of standing equivalence, this means $x\sim_D y$. Lawful redescription invariance therefore gives
+\[
+\mathrm{Stand}_D(x) \iff \mathrm{Stand}_D(y).
+\]
+On the other hand, admissibility-preservation of the auxiliary representation gives
+\[
+\mathrm{Stand}_D(x) \iff \Phi(I(x)), \qquad \mathrm{Stand}_D(y) \iff \Phi(I(y)).
+\]
+Combining these equivalences yields
+\[
+\Phi(I(x)) \iff \Phi(I(y)).
+\]
+So no admissibility-preserving auxiliary representation can refine standing more finely than tensor content. Any such representation factors through tensor-determined standing and yields no deeper standing-bearing layer.\cite{MaleyTrajectory}
+\end{proof}
+
+\begin{corollary}[No second same-scope standing-bearing equivalence]
+There is no admissibility-preserving same-scope equivalence relation on the fixed presentation carrier that preserves standing-bearing content while remaining genuinely distinct from $\sim_D$. Any such purported second equivalence either collapses to $\sim_D$ or else changes scope.
+\end{corollary}
+
+\begin{proof}
+If an equivalence relation is coarser than $\sim_D$, it identifies acts with different standing-bearing consequences and therefore fails to preserve same-scope standing-bearing content. If it is finer than $\sim_D$, then it distinguishes acts that already agree on every standing-bearing consequence; by Theorem~\ref{thm:no-stricter-standing-refinement}, that extra distinction cannot be standing-bearing. So the only admissibility-preserving same-scope equivalence is $\sim_D$ itself, up to bookkeeping.\cite{MaleyTrajectory,MaleyATS}
+\end{proof}
+
+\begin{corollary}[Exhaustion of same-domain discriminator routes]
+\label{cor:discriminator-route-exhaustion}
+Within the fixed domain, every purported refinement of admissibility or standing is exactly one of the following:
+\begin{enumerate}
+  \item quotient-factorizing bookkeeping with no independent authority;
+  \item extensional renaming of the unique gate / standing predicate;
+  \item a representative-only, metadata-level, or path-dependent discriminator barred by same-scope factorization; or
+  \item explicit scope change.
+\end{enumerate}
+No fifth same-domain route remains.
+\end{corollary}
+
+\begin{proof}
+Theorem~\ref{thm:same-scope-factorization-discipline} eliminates every purported same-scope discriminator that fails quotient factorization. Theorem~\ref{thm:standing-admissibility-equivalence} removes residual dual-track governance between admissibility and standing, so a same-scope refinement cannot survive by splitting the two notions apart. Theorem~\ref{thm:unique-same-scope-classification} eliminates genuinely distinct same-scope gates, leaving only extensional renaming when no new authority is introduced. Anything left over is either bookkeeping or explicit scope change.\cite{MaleyExhaustion,MaleyATS,MaleyStandingEquivalence}
+\end{proof}
+
+\subsubsection*{Inline proof anchor IV: standing quotient uniqueness and factorization discipline}
+
+The quotient closure used later is the formal content of \atsdoc{} together with the typed boundary discipline of \exhaustiondoc{}. The forcing chain is short.
+\begin{enumerate}
+  \item Any standing presentation $(Y,r,\mathrm{Pred}_Y)$ is complete: if $r(p)=r(p')$, then every same-scope standing-bearing value agrees on $p$ and $p'$, so they lie in the same standing class.
+  \item Soundness is then forced by stable reference and exhaustion: if $p\sim_D p'$ but $r(p)\neq r(p')$, the presentation is distinguishing two acts that already agree on tensor content and on every same-scope standing-bearing consequence. To maintain that distinction as standing-bearing, one would need a further admissible same-scope discriminator. But the fixed domain has no such discriminator beneath the quotient.
+  \item Soundness and completeness therefore yield a unique bijection from the standing quotient to any same-scope standing presentation. The quotient is not merely one convenient presentation among many; it is the unique same-scope standing-bearing content space up to unique isomorphism.
+  \item The factorization theorem is then immediate. If a same-scope standing-relevant functional $F$ fails to factor through the quotient, then there exist $p\sim_D p'$ with $F(p)\neq F(p')$. But $p$ and $p'$ already carry the same tensor content. So the difference detected by $F$ is representative-only, metadata-level, or path-dependent skin, and cannot be admitted as same-scope standing-bearing authority.
+\end{enumerate}
+This is why non-factorization itself serves as the witness of illicit same-scope authority import.
+
+\subsection{The unique admissible interior}
+
+The unique-interior theorem is now a short consequence of the gate, standing, conservation, and quotient theorems already fixed.
+
+\begin{definition}[Admissible interior]
+For a fixed domain $D$, the \emph{admissible interior} is the class
+\[
+\mathrm{Int}_D := \{a\in X_D^{\bullet} : \mathrm{Stand}_D(a)=1\}.
+\]
+By Theorem~\ref{thm:standing-emergence}, this is exactly the class of reuse-stably admissible acts on $D$.
+\end{definition}
+
+\begin{definition}[Lawful equivalence of interiors]
+Two subsets $I_1,I_2\subseteq X_D^{\bullet}$ are \emph{lawfully equivalent} if they determine the same subset of the standing quotient $\mathcal Q_D$. Equivalently, after identifying lawfully equivalent presentations, they contain exactly the same standing-positive acts.
+\end{definition}
+
+\begin{lemma}[Difference of interiors yields a standing split]
+\label{lem:difference-interiors-standing-split}
+Let $I_1,I_2\subseteq X_D^{\bullet}$ be closed under lawful redescription. If $I_1$ and $I_2$ are not lawfully equivalent, then there exists an evaluated act $a\in X_D^{\bullet}$ such that one interior treats $a$ as standing-positive and the other does not.
+\end{lemma}
+
+\begin{proof}
+If the two interiors are not lawfully equivalent, then their images in the standing quotient differ. So some lawful-redescription class belongs to one image but not the other. Choose any representative $a$ of that class. Because both interiors are closed under lawful redescription, membership of the class is equivalent to membership of $a$ itself. Hence one interior treats $a$ as standing-positive and the other does not.\cite{MaleyNecessity}
+\end{proof}
+
+\begin{theorem}[Unique admissible interior]
+\label{thm:unique-admissible-interior}
+For each fixed domain $D$, the admissible interior is unique up to lawful equivalence. More precisely, if $I_1$ and $I_2$ are two claimed admissible interiors for the same domain, then exactly one of the following holds:
+\begin{enumerate}
+  \item $I_1$ and $I_2$ are lawfully equivalent; or
+  \item one of $I_1$ and $I_2$ contains inadmissible or reuse-unstable surplus.
+\end{enumerate}
+In particular, there is no genuine same-scope plurality of admissible interiors.
+\end{theorem}
+
+\begin{proof}
+Assume that neither interior contains inadmissible or reuse-unstable surplus. Then every member of either interior is standing-positive by Theorem~\ref{thm:standing-emergence}. Suppose nevertheless that $I_1$ and $I_2$ are not lawfully equivalent. By Lemma~\ref{lem:difference-interiors-standing-split}, there exists an act $a$ such that one interior contains $a$ and the other does not. Because neither interior contains surplus, this means that $a$ receives two different standing verdicts on the same fixed domain. But standing is not an independent additional classifier beyond reuse-stable admissibility on the fixed interface. So differing standing verdicts on the same fixed domain would amount either to a second gate or to a substantive same-side split among admitted acts. Both are impossible by Theorems~\ref{thm:unique-same-scope-classification} and \ref{thm:standing-admissibility-equivalence}. Hence the interiors must be lawfully equivalent.\cite{MaleyNecessity}
+\end{proof}
+
+\begin{corollary}[No discrete or continuous plurality of admissible interiors]
+For a fixed domain there is no genuine plurality of admissible interiors, either discrete or continuously parameterized.
+\end{corollary}
+
+\begin{proof}
+A discrete plurality gives two non-equivalent interiors and contradicts Theorem~\ref{thm:unique-admissible-interior}. A continuously parameterized plurality makes interior membership depend on an admissibility-relevant parameter, which the AMetric boundary and no-parameterization theorems of Section~\ref{sec:ametric-boundary} already forbid. The discrete side is the explicit multiplicity elimination proved in \unusdoc{}; the continuous side is blocked by the AMetric theorem ladder already fixed in Section~\ref{sec:ametric-boundary}.\cite{MaleyUnus,MaleyAMetric,MaleyNecessity}
+\end{proof}
+
+\begin{theorem}[Non-representability of admissibility by weaker same-domain structure]
+\label{thm:nonrepresentability-admissibility}
+Fix one same-scope domain $D$. Then no weaker same-domain structure can underwrite admissibility or standing as an independent lower authorizer on $D$. In particular, no metric, probability, score, ranking, selector, privileged representative, structural invariant, categorical surrogate, or same-domain extension may serve as an admissibility-conferring structure except by one of the following four degenerate outcomes:
+\begin{enumerate}
+  \item it is inert bookkeeping with no admissibility-relevant force;
+  \item it is an illicit import of additional same-scope authority;
+  \item it violates lawful redescription, stable reference, irreversibility, or fixed-domain determinacy; or
+  \item it collapses extensionally to the unique admissibility gate / reuse-stable admissibility already fixed on $D$.
+\end{enumerate}
+Equivalently: admissibility and standing are not representable, on the same fixed domain, by any independent weaker surrogate structure.
+\end{theorem}
+
+\begin{proof}
+On the pre-admissible side, Section~\ref{sec:ametric-boundary} excludes admissibility-relevant metric, ranking, selector, and parameter structure; only equality-pattern content survives there. So no pre-boundary score, metric, ranking, or selector can confer admissibility. On the evaluated side, standing is exactly reuse-stable admissibility on the fixed domain, and any putatively independent authorizer performs gate work. If it changes who is admitted, it competes with the unique gate; if it leaves admission unchanged but refines the positive side substantively, it creates a forbidden same-side split; and if it does neither, it is bookkeeping only. Hence no independent carrier survives except by extensional collapse to the gate itself.
+
+Finally, the same-domain non-derivability closure fixed earlier in the capstone shows that no faithful lower generator or regime-preserving same-domain extension can derive admissibility, standing, reference, or irreversibility for the same original acts without illicit structure import, triviality, violation of the base assumptions, or extensional collapse back to the gate. Therefore no weaker same-domain representer of admissibility exists.\cite{MaleyAMetric,MaleyNecessity,MaleyUnus,MaleyFoundationalClosure}
+\end{proof}
+
+\subsection{Structural necessity and closure of the admissibility architecture}
+
+The preceding theorems are now strong enough to be compressed into one fixed-domain closure statement before the capstone turns to operators. The point of the next theorem is not to add a new burden. It makes explicit that the kernel floor, the AMetric boundary, the same-scope gate, the standing quotient, the unique interior, and the conservation law are not a menu of interface options but one forced architecture on the fixed domain.
+
+\begin{theorem}[Structural necessity and closure of the admissibility architecture]
+\label{thm:admissibility-architecture-closure}
+Fix one same-scope domain $D$ inside the target class already secured in Sections~\ref{sec:kernel-floor}--\ref{sec:ametric-boundary}. Then, up to lawful equivalence, exactly one admissibility architecture is available on $D$:
+\begin{enumerate}
+  \item a prior binary admissibility gate on the evaluated fragment;
+  \item standing and admissibility equivalent on that gate;
+  \item one standing quotient carrying all same-scope standing-bearing content, with every same-scope standing-relevant discriminator forced to factor through it;
+  \item one admissible interior, unique up to lawful equivalence; and
+  \item a conservation law under which standing can only be preserved or destroyed on the same scope.
+\end{enumerate}
+Any purported alternative same-domain architecture must instantiate at least one of the following defeated forms:
+\begin{enumerate}
+  \item pre-boundary selector, metric, order, ranking, parameter, or deeper invariant;
+  \item residual dual-track governance separating admissibility from standing;
+  \item a second same-scope gate or an admissibility-relevant same-side split;
+  \item same-act repair, generator, or independent carrier;
+  \item a representative-only, metadata-level, or path-dependent discriminator that fails factorization through the standing quotient;
+  \item illicit scope transport or fresh same-domain authority supplied by weaker surrogate structure; or
+  \item extensional collapse to the unique gate / standing predicate already fixed on $D$.
+\end{enumerate}
+Hence no alternative same-domain admissibility architecture exists.
+\end{theorem}
+
+\begin{proof}
+Section~\ref{sec:ametric-boundary} already closes the proposal side. The AMetric boundary theorem, the no-deeper-invariant theorem, and the derived non-parameterization theorem eliminate every pre-boundary selector, metric, order, ranking, parameter, and purported deeper invariant as same-domain admissibility authority. On the evaluated side, Theorem~\ref{thm:gate-existence-fixed-scope} forces a prior admissibility partition, and Theorem~\ref{thm:unique-same-scope-classification} rules out any competing same-scope gate. Theorem~\ref{thm:standing-admissibility-equivalence} removes residual dual-track governance between admissibility and standing, so no same-scope split remains in which admissibility is neutral while standing is separately conferred. Theorems~\ref{thm:no-same-act-repair}, \ref{thm:no-generators}, and \ref{thm:no-independent-carriers} remove every same-scope route by which positive-side authority could be recreated beneath or beside the gate. Theorem~\ref{thm:standing-quotient-uniqueness}, Corollary~\ref{cor:skin-non-authority}, and Theorem~\ref{thm:same-scope-factorization-discipline} force all same-scope standing-bearing content and every same-scope standing-relevant discriminator through one quotient, while Theorem~\ref{thm:unique-admissible-interior} and its plurality corollary force one admissible interior up to lawful equivalence. Theorem~\ref{thm:standing-conservation} and its cross-domain corollary close the remaining routes of creation, amplification, transfer, or recovery. Finally, Theorem~\ref{thm:nonrepresentability-admissibility}, read together with the kernel-floor non-derivability theorems of Section~\ref{sec:kernel-floor}, excludes weaker same-domain surrogate structures and faithful same-domain extensions except by illicit authority import, violation of the base goods, inert bookkeeping, or extensional collapse back to the gate. These are exactly the defeated alternative forms listed above, so no seventh same-domain admissibility architecture remains.
+\end{proof}
+
+\begin{corollary}[No design-choice reading of the admissibility architecture]
+\label{cor:no-design-choice-reading}
+Within the relevant regime, the kernel floor together with the admissibility architecture of the present section is a theorem-level necessity rather than an optional axiomatic or interface-design choice. To reject it, one must deny either the target-domain theorems of Section~\ref{sec:kernel-floor}, the AMetric theorems of Section~\ref{sec:ametric-boundary}, or one of the fixed-domain closure theorems collected above.
+\end{corollary}
+
+\begin{proof}
+The kernel floor is fixed as derived rather than axiomatic in Section~\ref{sec:kernel-floor}. The present theorem then shows that, once that floor and the AMetric boundary are in place, the same-domain admissibility architecture has no rival surviving form. So what remains is theorem-level necessity, not a menu of undischarged design alternatives.
+\end{proof}
+
+\begin{remark}[Counterexample trichotomy and primitive-floor clarification]
+Within the fixed-domain meaningful regime defined in this manuscript, no alternative admissibility architecture exists. Any purported counterexample either (i) changes scope, (ii) violates the base conditions required for non-degenerate reasoning, or (iii) collapses extensionally to the unique admissibility / standing gate. This is not a merely presentational way of stopping the derivation. The admissibility--standing--reference--irreversibility kernel is fixed in the capstone as a theorem-level floor: its non-derivability, minimality, and uniqueness are proved within the regime, the residual separation between admissibility and standing is eliminated by equivalence closure, and same-scope standing-relevant discriminators are exhausted by quotient factorization rather than by an open list of unchecked alternatives. Primitive status therefore means structural non-derivability within the same fixed-domain meaningful regime, not temporary axiomatization or interface-design choice.
+\end{remark}
+
+\begin{remark}[Why this compression matters]
+The capstone does not gain new mathematics by stating Theorem~\ref{thm:admissibility-architecture-closure}. It gains proof visibility. The theorem compresses a distributed chain into the exact hostile-reader claim that matters later: mathematics, physics, and same-domain meta-level escape are all downstream of an interface whose same-domain architecture is already closed.
+\end{remark}
+
+\begin{remark}[What is now fixed for later sections]
+The capstone may now treat the following as theorem-local fixed points: some gate exists on every non-degenerate fixed domain; no competing same-scope admissibility classifier survives; admissibility and standing are equivalent on that fixed domain; no repair, generator, or carrier route survives on the same scope; standing can only be preserved or destroyed; every same-scope standing-bearing presentation and standing-relevant discriminator factors through the standing quotient; no stricter admissibility-preserving standing refinement remains beneath tensor content; and the admissible interior is unique up to lawful equivalence. This is the exact closure layer required before operator exhaustion begins.
+\end{remark}
+

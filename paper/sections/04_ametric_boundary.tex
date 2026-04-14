@@ -1,0 +1,274 @@
+\section{AMetric boundary, singleton admissibility, and no deeper invariant}
+\label{sec:ametric-boundary}
+
+This section removes every admissibility-relevant pre-fixational structure before the capstone turns to gate uniqueness and the unique admissible interior. Its burden is earlier than standing emergence, conservation, or quotient uniqueness on the admitted side. What must be shown here is exact: before fixation there is no licensed individuator, no admissibility-relevant grading, no selector, no ordering, and no deeper invariant that constrains admissibility without either importing illicit structure or collapsing back to the boundary classification already being determined.
+
+\subsection{Pre-fixational non-reference and licensed individuators}
+
+\begin{definition}[Pre-fixational domain]
+A domain is \emph{pre-fixational} when its elements are candidates prior to any admissible target-fixing act. Before fixation no element is yet licensed as \emph{this} target rather than as one representative among many in a proposal space.
+\end{definition}
+
+\begin{definition}[Licensed individuator]
+A \emph{licensed individuator} on a pre-fixational domain is any admissibility-relevant feature that distinguishes candidates as identity-bearing before fixation: for example a privileged name, index, coordinate, selector, ordering, ranking, score, or representative-specific parameter.
+\end{definition}
+
+\begin{lemma}[Non-invariant pre-fixational predicates presuppose fixation]
+Let $X$ be a pre-fixational domain and let $P\subseteq X^n$ be a predicate intended to matter to admissibility prior to fixation. If $P$ is not invariant under some bijection $\pi:X\to X$, then $P$ presupposes a licensed individuator on $X$.
+\end{lemma}
+
+\begin{proof}
+Assume that $P$ is not invariant under some bijection $\pi:X\to X$. Then there exists a tuple $\bar x\in X^n$ such that either $\bar x\in P$ and $\pi(\bar x)\notin P$, or conversely. But before fixation the tuples $\bar x$ and $\pi(\bar x)$ differ only by representative assignment: no target has yet been licensed as \emph{this} target rather than another representative of the proposal space. So the difference in $P$-status cannot be explained by already-fixed standing-bearing content. The only possible explanation is that some representative-sensitive feature is already being treated as authority-bearing. That feature is exactly a licensed individuator. Hence any admissibility-relevant pre-fixational predicate that is not invariant under bijection already presupposes fixation-level authority.\cite{MaleyAMetric,MaleyNecessity}
+\end{proof}
+
+\begin{theorem}[Relabeling indifference is forced by pre-fixational non-reference]
+\label{thm:relabeling-indifference}
+Let $X$ be a pre-fixational domain with no licensed individuators. Then every admissibility-relevant predicate or structure on $X$ must be invariant under the full symmetric group $\mathrm{Sym}(X)$. Equivalently, before fixation arbitrary relabelings cannot change admissibility-relevant content.
+\end{theorem}
+
+\begin{proof}
+Suppose, toward contradiction, that some admissibility-relevant predicate or structure on $X$ is not invariant under $\mathrm{Sym}(X)$. Then it is not invariant under some bijection $\pi:X\to X$. By the previous lemma, that non-invariance presupposes a licensed individuator on $X$. But by hypothesis no such individuator exists. Therefore every admissibility-relevant predicate or structure on $X$ must be invariant under every bijection of $X$, i.e. under the full symmetric group.\cite{MaleyAMetric,MaleyNecessity}
+\end{proof}
+
+\begin{corollary}[No admissibility-relevant asymmetry without witness]
+Any admissibility-relevant asymmetry prior to fixation requires a licensed individuator, selector, order, metric, or target witness. Absent such witnesses, pre-fixational asymmetry is inadmissible.
+\end{corollary}
+
+\begin{proof}
+An admissibility-relevant asymmetry is a non-invariant structure on the pre-fixational domain. By Theorem~\ref{thm:relabeling-indifference}, any such non-invariance requires a licensed individuator. A selector, order, metric, ranking, coordinate system, or target witness is precisely the sort of structure by which such authority could be supplied. If none is available, then the asymmetry has no admissible witness and is therefore inadmissible.\cite{MaleyAMetric,MaleyNecessity}
+\end{proof}
+
+\subsection{Equality-pattern completeness and the collapse of pre-boundary structure}
+
+\begin{definition}[Pre-ontological domain and equality pattern]
+A \emph{pre-ontological domain} is a nonempty set $X$ equipped with no structure beyond equality. For a tuple $\bar x=(x_1,\dots,x_n)\in X^n$, its \emph{equality pattern} is the partition of $\{1,\dots,n\}$ whose blocks are the index sets of equal coordinates. Two tuples have the same equality pattern exactly when
+\[
+  x_i=x_j \iff y_i=y_j
+\]
+for all indices $i,j$.
+\end{definition}
+
+\begin{lemma}[Orbit classification by equality pattern]
+\label{lem:orbit-classification-equality-pattern}
+Fix $n\ge 1$. Two tuples $\bar x,\bar y\in X^n$ lie in the same $\mathrm{Sym}(X)$-orbit if and only if they have the same equality pattern.
+\end{lemma}
+
+\begin{proof}
+First assume that $\bar y=\pi(\bar x)$ for some bijection $\pi\in \mathrm{Sym}(X)$. Because $\pi$ is injective,
+\[
+  x_i=x_j \iff \pi(x_i)=\pi(x_j) \iff y_i=y_j
+\]
+for every pair of indices $i,j$. So the equality patterns coincide.
+
+Conversely, assume that $\bar x$ and $\bar y$ have the same equality pattern. List the distinct values appearing among the coordinates of $\bar x$ as $a_1,\dots,a_k$. Because the equality patterns agree, the coordinates of $\bar y$ also use exactly $k$ distinct values, say $b_1,\dots,b_k$, in matching positions. The partial map $a_r\mapsto b_r$ is therefore well-defined and injective. Extend that finite partial bijection arbitrarily to a bijection $\pi:X\to X$. Then $\pi(\bar x)=\bar y$, so the two tuples lie in the same orbit.\cite{MaleyAMetric,MaleyNecessity}
+\end{proof}
+
+\begin{theorem}[Equality-pattern completeness]
+\label{thm:equality-pattern-completeness}
+Every pre-boundary meaningful relation on a pre-ontological domain is completely determined by equality patterns. Equivalently, every meaningful relation is a union of $\mathrm{Sym}(X)$-orbits, and those orbits are exactly the equality-pattern classes.
+\end{theorem}
+
+\begin{proof}
+Let $R\subseteq X^n$ be a pre-boundary meaningful relation, i.e. a relation invariant under relabeling. Let $\bar x,\bar y\in X^n$ have the same equality pattern. By Lemma~\ref{lem:orbit-classification-equality-pattern}, there exists $\pi\in \mathrm{Sym}(X)$ with $\pi(\bar x)=\bar y$. Since $R$ is meaningful,
+\[
+  \bar x\in R \iff \pi(\bar x)\in R \iff \bar y\in R.
+\]
+So membership in $R$ depends only on the equality pattern. Since the orbits are exactly the equality-pattern classes, every meaningful relation is a union of those orbit classes.\cite{MaleyAMetric,MaleyNecessity}
+\end{proof}
+
+\begin{corollary}[No selector, no order, no metric beyond equality]
+\label{cor:no-selector-no-order-no-metric}
+On a pre-ontological domain:
+\begin{enumerate}
+  \item there is no nonconstant relabeling-invariant grading or indexing of individual proposals,
+  \item there is no relabeling-invariant asymmetric ordering of distinct proposals,
+  \item there is no equivariant selector choosing a canonical representative from a nontrivial set of proposals, and
+  \item every relabeling-invariant metric collapses to the discrete equality metric, so it contributes no graded admissibility content.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+For item~(1), observe that a relabeling-invariant grading or indexing of individual proposals is just a meaningful unary map or predicate. But for unary tuples there is only one equality pattern. By Theorem~\ref{thm:equality-pattern-completeness}, every meaningful unary predicate is therefore constant on all of $X$, and every meaningful unary map has constant fibers. So there is no nonconstant grading or indexing.
+
+For item~(2), suppose $<$ were a relabeling-invariant asymmetric ordering of distinct proposals and choose distinct $x,y\in X$ with $x<y$. Let $\pi$ be the transposition exchanging $x$ and $y$. Since $<$ is relabeling-invariant,
+\[
+  x<y \iff \pi(x)<\pi(y) \iff y<x,
+\]
+contradicting asymmetry.
+
+For item~(3), suppose $c$ were an equivariant selector on nontrivial proposal sets. Choose distinct $x,y\in X$ and set $A=\{x,y\}$. Let $\pi$ again be the transposition exchanging $x$ and $y$. Then $\pi(A)=A$, so equivariance gives
+\[
+  c(A)=c(\pi(A))=\pi(c(A)).
+\]
+But $c(A)$ must be either $x$ or $y$, and the transposition sends each of those to the other, so $c(A)\neq \pi(c(A))$. Contradiction.
+
+For item~(4), let $d:X\times X\to \mathbb R_{\ge 0}$ be a relabeling-invariant metric. If $x\neq y$ and $u\neq v$, choose a bijection $\pi$ with $\pi(x)=u$ and $\pi(y)=v$. Invariance gives
+\[
+  d(u,v)=d(\pi(x),\pi(y))=d(x,y).
+\]
+So every distance between distinct points has the same value, say $\lambda>0$. Together with $d(x,x)=0$, this is exactly the discrete equality metric up to overall scale.\cite{MaleyAMetric,MaleyNecessity}
+\end{proof}
+
+\begin{corollary}[Pre-admissible dimensionlessness]
+A pre-admissible proposal regime is dimensionless in the strong sense: there is no relabeling-invariant metric or monotone ordering on the proposal side beyond equality versus disequality.
+\end{corollary}
+
+\begin{proof}
+The previous corollary eliminates both nontrivial invariant orderings and nontrivial invariant metrics on the proposal side. So no dimensional, proximity, or graded comparison structure remains available pre-boundarily beyond equality and disequality.\cite{MaleyAMetric,MaleyNecessity}
+\end{proof}
+
+\subsection{The AMetric boundary and the no-deeper-invariant theorem}
+
+\begin{definition}[AMetric boundary]
+The \emph{AMetric boundary} is the structural interface separating pre-admissible classification and eligibility determination from post-admissible licensed operation. At this boundary objects may be classified and standing may be determined, but no admissible transformation is performed. The boundary is non-transmissive: no admissible structure may be transported backward across it.
+\end{definition}
+
+\begin{definition}[Licensed operator]
+A \emph{licensed operator} is a partial transformation whose domain of application is fixed only after admissibility has been determined. Equivalently, it is an operator of the admitted interior rather than of the raw pre-admissible proposal space.
+\end{definition}
+
+\begin{theorem}[Boundary non-action]
+\label{thm:boundary-non-action}
+No licensed action, execution, or transformation occurs at the AMetric boundary. Boundary work is classificatory rather than operational.
+\end{theorem}
+
+\begin{proof}
+Suppose, toward contradiction, that a licensed transformation occurs at the boundary. By the preceding definition, the operator's domain of application is fixed only after admissibility has already been determined. But the AMetric boundary is precisely the interface at which admissibility is being settled. So the alleged boundary action presupposes the very status whose determination the boundary is meant to provide. That is circular. Therefore no licensed action, execution, or transformation occurs at the boundary.\cite{MaleyAMetric,MaleyNecessity}
+\end{proof}
+
+\begin{theorem}[Operator undefinedness at the boundary]
+\label{thm:operator-undefinedness-boundary}
+No admissibility-conferring operator is defined on the AMetric boundary itself.
+\end{theorem}
+
+\begin{proof}
+An admissibility-conferring operator would have to be either licensed or unlicensed. If it is licensed, then by definition it becomes available only after admissibility has already been fixed, so it cannot first determine admissibility. If it is unlicensed, then whatever authority it confers is external to the regime under construction and therefore an illicit import rather than an internal gate mechanism. So no admissibility-conferring operator is defined at the boundary itself.\cite{MaleyAMetric,MaleyNecessity}
+\end{proof}
+
+\begin{theorem}[No admissibility-relevant boundary trajectory]
+\label{thm:no-boundary-trajectory}
+There is no admissibility-relevant process, trajectory, or staged approach by which a proposal becomes ``more boundary-positive'' before admission.
+\end{theorem}
+
+\begin{proof}
+A boundary trajectory would require at least one of the following: a parameter measuring progress toward admission, an ordering of stages from less admissible to more admissible, or an operator that updates the proposal through boundary-adjacent states. But pre-boundary parameters, orderings, selectors, and nontrivial metrics have already been ruled out by Corollary~\ref{cor:no-selector-no-order-no-metric}; and boundary action or operator application is ruled out by Theorems~\ref{thm:boundary-non-action} and \ref{thm:operator-undefinedness-boundary}. So there is no admissibility-relevant boundary trajectory.\cite{MaleyAMetric,MaleyNecessity}
+\end{proof}
+
+\begin{theorem}[Boundary non-transmissivity]
+No admissible structure may be transported backward across the AMetric boundary. In particular, no post-fixation metric, order, selector, operator, or privileged interior chart may be used to govern pre-admissible classification.
+\end{theorem}
+
+\begin{proof}
+Assume that some post-fixation structure $S$ is transported backward to govern pre-admissible classification. Then the pre-admissible side is no longer operating with equality alone; it is now governed by the additional admissibility-relevant structure $S$. But Theorem~\ref{thm:equality-pattern-completeness} and Corollary~\ref{cor:no-selector-no-order-no-metric} show that no such meaningful metric, order, selector, or graded structure survives under full relabeling symmetry on the proposal side. So either $S$ has no pre-boundary authority at all, or it breaks the primitive symmetry assumptions by illicit import. In neither case is same-scope backward transport admissible.\cite{MaleyAMetric,MaleyNecessity}
+\end{proof}
+
+\begin{definition}[Purported deeper invariant]
+A \emph{purported deeper invariant} is a family of pre-boundary meaningful relations claimed to determine or constrain admissibility more fundamentally than the boundary classification itself. The claim of ``deeper'' means that the invariant is supposed to operate before admissibility is fixed and yet still decide, or partly decide, which proposals qualify.
+\end{definition}
+
+\begin{lemma}[Constraint requires pre-boundary availability]
+If a purported deeper invariant genuinely constrains boundary classification, then it must be available and meaningful on the pre-admissible side. A purely post-fixation invariant cannot ground admissibility without circularity.
+\end{lemma}
+
+\begin{proof}
+If an invariant were available only after admissibility had already been fixed, then using it to determine admissibility would presuppose the very status under determination. So any invariant that genuinely constrains boundary classification must already be available before admissibility is fixed.\cite{MaleyNecessity}
+\end{proof}
+
+\begin{lemma}[Invariant data induce invariant unary criteria]
+Let $Q$ be any collection of pre-boundary meaningful relations on the proposal side. Any criterion $U(x)$ for individual proposals that is defined solely from $Q$, without adding non-invariant constants, labels, or privileged representatives, is itself a meaningful unary predicate.
+\end{lemma}
+
+\begin{proof}
+The defining rule for $U$ uses only equality, logical operations, quantification over the proposal set, and membership in relations from $Q$. Because each relation in $Q$ is meaningful, its truth values are preserved under relabeling, and equality is preserved as well. So for every $\pi\in \mathrm{Sym}(X)$ one has
+\[
+  U(x) \iff U(\pi(x)).
+\]
+Thus $U$ is itself a meaningful unary predicate.\cite{MaleyNecessity}
+\end{proof}
+
+\begin{theorem}[No deeper pre-boundary invariant with independent constraining force]
+\label{thm:no-deeper-invariant}
+Let $Q$ be a purported deeper invariant. Then exactly one of the following holds:
+\begin{enumerate}
+  \item $Q$ relies on non-invariant labels, coordinates, selectors, or post-fixation structure and is therefore an illicit import;
+  \item every unary admissibility criterion induced from $Q$ is trivial, so $Q$ has no independent constraining force on individual proposals; or
+  \item once admissibility is fixed, the only nontrivial constraining role played by $Q$ is extensionally identical to the boundary classification already being determined.
+\end{enumerate}
+There is no fourth option.
+\end{theorem}
+
+\begin{proof}
+By the previous lemma, any genuinely deeper invariant must be available pre-boundarily. If it is not invariant under relabeling, then by Theorem~\ref{thm:relabeling-indifference} it already assigns admissibility-relevant authority to labels, coordinates, or representatives alone, so it is an illicit import and we are in case~(1).
+
+So assume $Q$ is relabeling-invariant. Any way of turning $Q$ into a criterion for whether an individual proposal should pass the boundary produces, by the preceding lemma, a meaningful unary predicate on the proposal side. But by Corollary~\ref{cor:no-selector-no-order-no-metric}, and more fundamentally by the unary-collapse consequence of Theorem~\ref{thm:equality-pattern-completeness}, every such unary criterion is trivial. That yields case~(2) unless additional structure is imported.
+
+The only remaining possibility is that, once admissibility is fixed, the nontrivial work done by $Q$ is simply to pick out extensionally the very same proposals already picked out by the admissibility classification. In that case $Q$ adds no independent constraining force and falls under case~(3). These three cases exhaust the possibilities.\cite{MaleyAMetric,MaleyNecessity}
+\end{proof}
+
+\begin{theorem}[No faithful lower generator at the pre-boundary layer]
+\label{thm:no-faithful-lower-generator-preboundary}
+No faithful lower generator of admissibility exists at the pre-boundary layer. Any purported lower generator ends in illicit structure import, triviality, violation of the base assumptions, or extensional collapse to the admissibility predicate already being determined.
+\end{theorem}
+
+\begin{proof}
+Assume, toward contradiction, that there exists a purported lower generator $G$ together with a rule $\Phi$ such that $G$ determines or constrains admissibility prior to fixation while remaining compatible with lawful redescription, non-circular in use, and independently constraining.
+
+If the decisive work of $G$ is genuinely pre-boundary, then by Theorem~\ref{thm:no-deeper-invariant} any such object immediately falls into one of three cases: illicit import, triviality, or post-fixational extensional coincidence with the boundary classification. These are already three of the four outcomes named in the theorem.
+
+It remains only to consider the possibility that the purported lower generator tries to evade Theorem~\ref{thm:no-deeper-invariant} by shifting its decisive work outside the pre-boundary proposal regime while still claiming independent constraining force for the same boundary. But then, if that work constrains eligibility at all, it must do so either by transporting post-fixation structure backward across the boundary, or by altering what is preserved under lawful redescription, or by altering the identity conditions under which irreversible commitment is tracked. The first move is illicit structure import. The second and third destroy the base goods already fixed in Sections~\ref{sec:kernel-floor} and \ref{sec:modeling-necessity}: stable reference fails, compositional identity drifts, or irreversible commitment is no longer well-defined. So every candidate lower generator ends in illicit import, triviality, base-good violation, or extensional collapse. No fifth outcome remains.\cite{MaleyNecessity}
+\end{proof}
+
+\begin{theorem}[Derived boundary axiom: binary, non-eventful, non-parameterized]
+\label{thm:derived-boundary-axiom}
+On the evaluated fragment, the admissibility boundary is binary and non-eventful. Consequently it admits no admissibility-relevant parameterization, continuous or discrete, including any discrete indexing of multiple positive ways of crossing the boundary.
+\end{theorem}
+
+\begin{proof}
+Binary standing at the interface is already fixed by Theorem~\ref{thm:bivalence-nondegenerate-reasoning} and Corollary~\ref{cor:binary-eligibility-state-transition} of Section~\ref{sec:modeling-necessity}: on the evaluated fragment an act is either admitted or not admitted, and undefinedness is fail-closed rather than a third standing value.
+
+The boundary is non-eventful because Theorem~\ref{thm:boundary-non-action} rules out licensed action or execution there, Theorem~\ref{thm:operator-undefinedness-boundary} rules out admissibility-conferring operators there, and Theorem~\ref{thm:no-boundary-trajectory} rules out any staged or process-like approach toward admission.
+
+Now suppose, toward contradiction, that there were an admissibility-relevant parameterization of crossing. Then either the parameterization would create more than two standing-relevant statuses on the evaluated fragment --- e.g. admissible of type $i$ and admissible of type $j\neq i$ in addition to inadmissible --- or else it would require a selector to choose among multiple positive forms of crossing. The first option contradicts binary standing at the interface. The second contradicts the collapse of pre-boundary selectors, rankings, and metrics established above. So no admissibility-relevant parameterization, continuous or discrete, survives at the boundary.\cite{MaleyAMetric,MaleyNecessity}
+\end{proof}
+
+\subsection{Singleton meta-necessity and the binary core of admissibility}
+
+\begin{definition}[Meta-constraint]
+A \emph{meta-constraint} is any rule that purports to regulate intelligibility by constraining which descriptions count as reference-bearing and composable without collapse.
+\end{definition}
+
+\begin{theorem}[Singleton meta-necessity]
+\label{thm:singleton-meta-necessity}
+There exists exactly one terminal meta-constraint governing intelligibility in non-degenerate irreversible compositional systems: admissibility with standing conservation. Any putative independent meta-constraint either presupposes admissibility-with-standing and is therefore derivative, or else permits collapse of reference under redescription and composition and is therefore inadmissible.
+\end{theorem}
+
+\begin{proof}
+Once irreversibility is made well-defined, some admissibility invariant must survive redescription and recomposition strongly enough to stabilize standing. Let $C$ denote admissibility-with-standing. Consider any candidate meta-constraint $C'\neq C$.
+
+If $C'$ is to constrain intelligibility, it must be stable under admissible redescription and composition; otherwise it can be defeated by the system's own recomposition freedoms, and it therefore does not constrain intelligibility at all. But stability under admissible redescription already presupposes admissibility-with-standing, because what counts as stable is defined only relative to admissible redescription and standing conservation. So any stable $C'$ is derivative on $C$. If instead $C'$ is not stable under admissible redescription and composition, then it permits self-undermining redescriptions and so fails intelligibility. Therefore no independent terminal meta-constraint exists alongside admissibility with standing conservation.\cite{MaleyAMetric}
+\end{proof}
+
+\begin{corollary}[Binary standing at the admissibility interface]
+\label{cor:binary-standing-interface}
+On the evaluated fragment, standing has exactly two standing-relevant statuses: eligible and ineligible. Any putative third standing-relevant status would either introduce a second independent authorizer or reintroduce repair, override, or parameterization at the boundary.
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:bivalence-nondegenerate-reasoning}, admissibility on the evaluated fragment is fail-closed and bivalent. Suppose nevertheless that a third standing-relevant status survives.
+
+If the extra status lies on the positive side of the interface, then admitted acts are split into more than one standing-bearing class. One may then define a new meta-constraint that privileges one positive status over the other. That contradicts Theorem~\ref{thm:singleton-meta-necessity}.
+
+If the extra status lies between admitted and rejected or refines the negative side in a way that changes later eligibility, then it either reintroduces a repair/override route or turns admissibility into a parameterized interface with more than two standing-relevant statuses. That contradicts Theorem~\ref{thm:derived-boundary-axiom} together with the fail-closed bivalence already fixed in Section~\ref{sec:modeling-necessity}. So only two standing-relevant statuses survive: eligible and ineligible.\cite{MaleyAMetric}
+\end{proof}
+
+\begin{proposition}[Binary core of irreversibility-stabilizing invariants]
+\label{prop:binary-core-irreversibility-invariants}
+Any irreversibility-stabilizing invariant has a binary standing-relevant core. Either it is constant on the fibers of the standing gate and its extra values are bookkeeping, or it refines permissibility only by selecting a stricter subrelation of admissible updates rather than introducing a third standing-bearing status.
+\end{proposition}
+
+\begin{proof}
+Let $I$ be an invariant sufficient to stabilize irreversibility. If the extra values of $I$ do not change which updates are admissible or which standing-bearing continuations remain available, then those extra values do no same-scope standing work and are bookkeeping only. In that case $I$ is constant on the fibers of the standing gate for all standing-relevant purposes.
+
+Suppose instead that the extra values of $I$ do change admissible reachability. Then they do so only by selecting a stricter subset of already admissible edges or updates. That changes the admissible update relation, but it still does not introduce a third standing-bearing status at the interface. The standing-relevant core remains binary: an update is either licensed or it is not. So any irreversibility-stabilizing invariant either factors through the binary gate or acts only by selecting a stricter admissible subrelation. In neither case does it generate an additional same-scope standing value.\cite{MaleyAMetric}
+\end{proof}
+

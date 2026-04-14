@@ -1,0 +1,94 @@
+\section{Formalization map and theorem-register note}
+\label{app:formalization-map}
+
+\begin{fixedbox}
+\textbf{Claim discipline.} This appendix states formalization posture only to the exact level documented in the declared sources. It does not enlarge the manuscript's proof claims, and it does not infer any unified public Lean surface where the sources themselves document only theorem families, wrapper surfaces, or manuscript-specific audits.
+\end{fixedbox}
+
+\subsection*{Documented package facts carried by the declared sources}
+
+\begin{fixedbox}
+\textbf{Documented package facts.}
+\begin{itemize}
+  \item \fcas{} documents a current Lean package \texttt{MaleyLean}, version \texttt{0.1.0}, on toolchain \texttt{leanprover/lean4:v4.28.0}, with public entry points \texttt{Main.lean} and \texttt{MaleyLean.lean}, theorem aggregation in \texttt{TheoremRegister.lean}, and paper-facing wrappers in \texttt{PaperStatements.lean}.
+  \item \trajpaper{} documents a public theorem surface exported through \texttt{TheoremRegister.lean} and \texttt{PaperStatements.lean}, with a dependency spine through \texttt{AmetricBoundary}, \texttt{Transport}, \texttt{Witness}, \texttt{NoRepair}, \texttt{Irrecoverability}, \texttt{StandingDeterminacy}, \texttt{Bivalence}, and \texttt{BivalenceUniqueness}.
+  \item \noninstgodeldoc{} states that its theorem chain has been encoded in Lean4 with the same proof order, that the exported paper-facing theorem ladder is axiom-free, and that the documented export surface includes the route-exhaustion theorems, G\"odel-threat alignment, the translation filter for ordinary G\"odel objections, and the main non-instantiability theorem, while assuming the same primitive floor rather than generating it internally.
+\end{itemize}
+\end{fixedbox}
+
+\subsection*{Paper-to-Lean map at the exact documented level}
+
+{\small
+\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{P{0.24\textwidth}P{0.70\textwidth}}
+\caption{Paper-to-Lean map for the capstone, stated only to the level documented in the declared sources}\\
+\toprule
+\textbf{Capstone burden} & \textbf{Documented support, status, and boundary note} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Capstone burden} & \textbf{Documented support, status, and boundary note} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Kernel floor, non-derivability, mechanization boundary (\S\,2) &
+\textbf{Documented support.} \fcas{} package facts and wrapper table.\par
+\textbf{Claim status here.} manuscript-level theorem-family documentation only; no separate public lower-layer theorem surface is claimed for kernel generation.\par
+\textbf{Boundary note.} The manuscript proves Section~2 locally. The formalization claim begins only downstream of the fixed kernel floor. \\
+
+Bivalence, same-side split collapse, standing emergence, no same-act repair, no generators, no primitive carriers, uniqueness of admissible interior, standing conservation (\S\,4--5) &
+\textbf{Documented support.} {\ttfamily\footnotesize
+PaperBivalenceInterfaceStatement,\par
+PaperSameSideSplitCollapseSummaryStatement,\par
+PaperStandingEmergenceStatement,\par
+PaperNoSameActRepairStatement,\par
+PaperNoGeneratorsStatement,\par
+PaperNoPrimitiveCarriersStandingFormStatement,\par
+PaperUniquenessOfAdmissibleInteriorStatement,\par
+PaperStandingConservationStatement.}\par
+\textbf{Claim status here.} theorem-level where documented in \fcas{} for the fixed-kernel consequence layer; local proof surface in the manuscript itself for Sections~4--5.\par
+\textbf{Boundary note.} The manuscript now proves this layer locally and cites the documented Lean surface only as corroborative correspondence. \\
+
+State-transition form, identity persistence, irreversible commitment, coherence meta-theorem, and finite fixed-scope trajectory geometry (\S\,3) &
+\textbf{Documented support.} \trajpaper{} package facts together with its documented theorem surface exported through \texttt{TheoremRegister.lean} and \texttt{PaperStatements.lean}.\par
+\textbf{Claim status here.} theorem-family and dependency-spine level for the modeling theorem family; theorem-level and theorem-family correspondence for the finite fixed-scope trajectory results where documented in \trajpaper{}.\par
+\textbf{Boundary note.} The manuscript proves Section~3 locally. The documented Lean correspondence at this layer is only the trajectory-side surface explicitly recorded in \trajpaper{}. \\
+
+AMetric collapse, standing-region metric content, failure-region metric collapse, standing bivalence, bivalence uniqueness, irrecoverability family (\S\,4--5) &
+\textbf{Documented support.} {\ttfamily\footnotesize
+AmetricCollapseTheorem,\par
+Paper\_AmetricCollapseTheorem,\par
+Paper\_StandingRegionCarriesAllAdmissibleMetricContent,\par
+Paper\_FailureRegionSupportsNoAdmissibleMetricContent,\par
+Paper\_IrrecoverabilityIsMetricInvariant,\par
+Paper\_StandingBivalenceTheorem,\par
+Paper\_BivalenceUniquenessTheorem.}\par
+\textbf{Claim status here.} theorem-level and theorem-family level in \trajpaper{}.\par
+\textbf{Boundary note.} The manuscript proves the AMetric and interface-forcing layer locally; the Lean surface documented for this layer remains exactly the theorem-level / theorem-family surface stated in \trajpaper{}, no more. \\
+
+Operator exhaustion and mathematics closure (\S\,6) &
+\textbf{Documented support.} none documented at the capstone level for the new same-scope operator-closure stack.\par
+\textbf{Claim status here.} text-level local proof surface from \sameoperatorsdoc{}, \clausuradoc{}, and \fixedbasedoc{}, with post-closure classification support from \eademdoc{}.\par
+\textbf{Boundary note.} No separate public Lean surface is claimed here. \\
+
+Same-domain G\"odel non-instantiability (\S\,8) &
+\textbf{Documented support.} manuscript-specific Lean audit stated in \noninstgodeldoc{}, including a documented paper-facing theorem ladder for inferential-life exhaustion, closure-relevance transmission, code-predicate role exhaustion, G\"odel-threat alignment, the translation filter for ordinary G\"odel objections, route exhaustion, and the main non-instantiability theorem.\par
+\textbf{Claim status here.} manuscript-audit level with documented exported theorem names for the Section~8 theorem ladder.\par
+\textbf{Boundary note.} The manuscript proves Section~8 locally and relies on the documented manuscript-specific audit only as stated there. No broader unified Lean surface is inferred. \\
+
+Consequence manuscripts (\S\,10) &
+\textbf{Documented support.} none in the present capstone.\par
+\textbf{Claim status here.} no capstone Lean claim.\par
+\textbf{Boundary note.} These remain downstream consequence roadmaps or profiles only. \\
+
+Capstone-wide merged theorem register &
+\textbf{Documented support.} none supplied.\par
+\textbf{Claim status here.} not claimed.\par
+\textbf{Boundary note.} A dedicated unified capstone Lean audit would be required before such a claim becomes licit. \\
+\end{longtable}
+}
+
+\begin{reviewbox}
+\textbf{Interpretive rule.} Where the declared sources give exact public theorem names, the manuscript may repeat them. Where they give only theorem families or module-level provenance, the manuscript must say so. Where they give only a manuscript-specific audit statement, the manuscript must stop there. No further formalization claim is licensed.
+\end{reviewbox}

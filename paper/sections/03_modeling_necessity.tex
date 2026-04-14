@@ -1,0 +1,440 @@
+\section{Modeling necessity and coherent trajectory form}
+\label{sec:modeling-necessity}
+
+\subsection{Why modeling necessity follows the kernel floor}
+
+Once the kernel floor is fixed, a new question becomes unavoidable: what structural form must reasoning take if it is to preserve the target phenomenon through lawful redescription, continuation, and commitment? This section does not re-derive the kernel. It shows that, for the already fixed target class, state-transition representation, identity persistence, irreversible commitment, fail-closed bivalence, and the finite fixed-scope path geometry of coherence are forced rather than stylistic.
+
+\subsection{History interfaces, stable reference, and the canonical quotient}
+
+\begin{definition}[History interface]
+Let $\mathrm{Act}$ be a set of acts and let $\mathrm{Act}^{<\omega}$ be the set of finite act-sequences, with concatenation written by $\cdot$ and empty history $\epsilon$. A \emph{history interface} is a partial evaluation map
+\[
+\hat\varepsilon : \mathrm{Act}^{<\omega} \times \mathrm{Act} \rightharpoonup \{0,1\},
+\]
+where $\hat\varepsilon(h,a)$ is interpreted as the standing value assigned to attempting act $a$ after history $h$, whenever that value is defined.
+\end{definition}
+
+\begin{definition}[Standing-coherence and future-behavior equivalence]
+A history interface is \emph{standing-coherent} if evaluation is stable under lawful redescription and recomposition: whenever histories $h$ and $h'$ are related by a finite chain of licensed redescriptions and rebracketings, the values $\hat\varepsilon(h,a)$ and $\hat\varepsilon(h',a)$ agree in definedness and value for every act $a$.
+
+Given such an interface, define a relation $\sim$ on histories by
+\[
+h \sim h' \iff \forall \sigma \in \mathrm{Act}^{<\omega}\ \forall a\in \mathrm{Act}:
+\hat\varepsilon(h\cdot \sigma,a)\downarrow \Leftrightarrow \hat\varepsilon(h'\cdot \sigma,a)\downarrow,
+\]
+and whenever both sides are defined,
+\[
+\hat\varepsilon(h\cdot \sigma,a)=\hat\varepsilon(h'\cdot \sigma,a).
+\]
+This is the future-behavior quotient, or Myhill--Nerode form, of the history interface.
+\end{definition}
+
+\begin{definition}[Stable reference]
+A history interface has \emph{stable reference} if it is standing-coherent in the sense above. Equivalently, stable reference is the requirement that lawful redescription and recomposition preserve definedness and standing value for every future evaluated context.
+\end{definition}
+
+\begin{theorem}[Canonical state-transition representation]
+\label{thm:canonical-state-transition-representation}
+Let $\hat\varepsilon$ be a standing-coherent history interface. Let $S := \mathrm{Act}^{<\omega}/\!\sim$ and write $[h]$ for the $\sim$-class of a history $h$. Then there is a canonical partial update operator
+\[
+U : S \times \mathrm{Act} \rightharpoonup S, \qquad U([h],a):=[h\cdot a]
+\]
+whenever $\hat\varepsilon(h,a)=1$, together with a canonical evaluation map
+\[
+\varepsilon : S \times \mathrm{Act} \rightharpoonup \{0,1\}, \qquad \varepsilon([h],a):=\hat\varepsilon(h,a),
+\]
+such that the original interface is recovered exactly. In particular, the quotient by future-behavior equivalence is the coarsest identity-preserving state space for the interface.
+\end{theorem}
+
+\begin{proof}
+If $h\sim h'$, then the defining condition with continuation $\sigma=\epsilon$ gives agreement of $\hat\varepsilon(h,a)$ and $\hat\varepsilon(h',a)$ in definedness and value for every $a$, so $\varepsilon([h],a)$ is well-defined. Likewise, if $\hat\varepsilon(h,a)=1$ and $h\sim h'$, then for every continuation $\sigma$ and act $b$,
+\[
+\hat\varepsilon((h\cdot a)\cdot \sigma,b)=\hat\varepsilon((h'\cdot a)\cdot \sigma,b)
+\]
+in definedness and value, so $h\cdot a \sim h'\cdot a$ and $U$ is well-defined on classes. The original interface is recovered by construction because $\varepsilon([h],a)$ is defined to be $\hat\varepsilon(h,a)$.
+
+For the final claim, suppose one tried to identify histories more coarsely than $\sim$ while still preserving identity through all future evaluated contexts. Then some pair of histories that diverge under a future continuation would be treated as the same. That makes future admissibility and standing presentation-dependent. The quotient by $\sim$ is therefore the coarsest identity-preserving state space.\cite{MaleyAMetric}
+\end{proof}
+
+\subsection{Identity persistence and irreversible commitment}
+
+\begin{definition}[Reachability and non-trivial inferential content]
+Let $S$ and $U$ be as in Theorem~\ref{thm:canonical-state-transition-representation}. Write $s \leadsto t$ if there exists a finite sequence of standing-positive updates taking $s$ to $t$, and define
+\[
+\mathrm{Reach}(s):=\{t\in S : s \leadsto t\}.
+\]
+The interface has \emph{non-trivial inferential content} if there exist a history $h$ and an act $a$ with $\hat\varepsilon(h,a)=1$ such that, writing $s=[h]$ and $s':=U(s,a)$,
+\[
+\mathrm{Reach}(s')\subsetneq \mathrm{Reach}(s).
+\]
+Equivalently, some standing-positive commitment has persistent constraint effect on what future evaluated configurations remain reachable.
+\end{definition}
+
+\begin{theorem}[Identity persistence]
+\label{thm:identity-persistence}
+Stable reference forces identity persistence. More precisely, if the history interface is standing-coherent, then future-behavior equivalence is a congruence for concatenation: if $h\sim h'$, then $h\cdot \sigma \sim h'\cdot \sigma$ for every finite continuation $\sigma$. Consequently, admissible evolution preserves equivalence classes.
+\end{theorem}
+
+\begin{proof}
+Fix $h\sim h'$ and a continuation $\sigma$. For any further continuation $\tau$ and act $a$, the histories $(h\cdot \sigma)\cdot \tau$ and $(h'\cdot \sigma)\cdot \tau$ are just $h\cdot(\sigma\cdot \tau)$ and $h'\cdot(\sigma\cdot \tau)$. Since $h\sim h'$, the corresponding evaluations agree in definedness and value. So $h\cdot \sigma \sim h'\cdot \sigma$. The update operator therefore preserves equivalence classes whenever it is defined.\cite{MaleyAMetric}
+\end{proof}
+
+\begin{lemma}[Mutual reachability implies reachability-set equality]
+\label{lem:mutual-reachability-implies-equality}
+If $s \leadsto s'$ and $s' \leadsto s$, then $\mathrm{Reach}(s)=\mathrm{Reach}(s')$.
+\end{lemma}
+
+\begin{proof}
+Let $t \in \mathrm{Reach}(s)$. Then $s \leadsto t$. Since $s' \leadsto s$, concatenating the path $s' \leadsto s$ with $s \leadsto t$ gives $s' \leadsto t$, so $t \in \mathrm{Reach}(s')$. Thus $\mathrm{Reach}(s) \subseteq \mathrm{Reach}(s')$. The reverse inclusion is symmetric using $s \leadsto s'$.
+\end{proof}
+
+\begin{theorem}[Irreversible commitment theorem]
+\label{thm:irreversible-commitment}
+Stable reference together with non-trivial inferential content forces at least one irreversible commitment. That is, there exist states $s,s'\in S$ and an act $a$ such that $U(s,a)=s'$ is standing-positive and there is no return path $s'\leadsto s$.
+\end{theorem}
+
+\begin{proof}
+Choose $s\to s'$ witnessing non-trivial inferential content, so $\mathrm{Reach}(s')\subsetneq \mathrm{Reach}(s)$. If there were a return path $s'\leadsto s$, then Lemma~\ref{lem:mutual-reachability-implies-equality} would give $\mathrm{Reach}(s')=\mathrm{Reach}(s)$, contradicting strict inclusion. Hence the commitment is irreversible.\cite{MaleyAMetric}
+\end{proof}
+
+\begin{theorem}[Coherence necessity theorem]
+\label{thm:coherence-necessity}
+Let $\hat\varepsilon$ be a history interface with stable reference and non-trivial inferential content. Then coherent discourse necessarily instantiates
+\begin{enumerate}
+  \item identity persistence, in the sense of Theorem~\ref{thm:identity-persistence}, and
+  \item at least one irreversible commitment, in the sense of Theorem~\ref{thm:irreversible-commitment}.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Identity persistence is exactly Theorem~\ref{thm:identity-persistence}. Existence of at least one irreversible commitment is exactly Theorem~\ref{thm:irreversible-commitment}.\cite{MaleyAMetric}
+\end{proof}
+
+\begin{remark}[What the theorem forbids]
+The theorem rules out two familiar evasions at once. It rules out reference without persistence, because the canonical quotient is forced by stable reference. And it rules out inference without commitment, because a regime in which every standing-positive step were reversible would fail the non-trivial inferential-content condition that makes commitment matter at all.\cite{MaleyAMetric}
+\end{remark}
+
+\subsection{The coherence meta-theorem}
+
+\begin{definition}[Finitary explicitness]
+A reasoning practice is \emph{finitary-explicit} when whether an update is standing-positive is determined by a finite certificate in the object-language of the regime rather than by an infinitary or semantic oracle external to its admissible action.
+\end{definition}
+
+\begin{theorem}[Coherence meta-theorem]
+\label{thm:coherence-meta-theorem}
+Let a reasoning practice claim coherence in the sense relevant to the capstone. Then coherence forces all of the following:
+\begin{enumerate}
+  \item stable reference under lawful redescription,
+  \item compositional closure of candidate material under finite recombination,
+  \item canonical state-transition representation together with identity persistence and at least one irreversible commitment, and
+  \item finitary explicitness of the permissibility interface.
+\end{enumerate}
+In particular, state-transition form is not an optional modeling preference once coherent reasoning is in view.
+\end{theorem}
+
+\begin{proof}
+Stable reference is necessary because otherwise the same purported claim can change target under lawful redescription and no claim-bearing identity is preserved. Compositional closure is necessary because if previously evaluated material may be recombined only under hidden restrictions, then the system either launders inadmissibility by presentation or smuggles in an undeclared scope restriction. Given stable reference and non-trivial inferential content, Theorems~\ref{thm:canonical-state-transition-representation}, \ref{thm:identity-persistence}, and \ref{thm:irreversible-commitment} force canonical state-transition representation, identity persistence, and at least one irreversible commitment.
+
+For finitary explicitness, note that a standing-bearing interface that depended essentially on an infinitary or semantic oracle would not generate permissibility from the regime's own admissible action. It would import standing from outside the object-language of the same scope. The present theorem family therefore forces a finitely presentable permissibility interface.\cite{MaleyAMetric}
+\end{proof}
+
+\subsection{Bivalence of non-degenerate reasoning}
+
+\begin{definition}[Reference, standing, and irreversibility axioms]
+A reasoning system satisfies:
+\begin{enumerate}
+  \item \emph{Reference} if at least one expression has a determinate denotation and not all expressions collapse to the same trivial object;
+  \item \emph{Standing} if identity is preserved across licensed inference or update unless an explicit identity-reset is declared; and
+  \item \emph{Irreversibility} if there exists at least one commitment operation that cannot be globally undone while preserving reference and standing.
+\end{enumerate}
+\end{definition}
+
+\begin{lemma}[No standing-preserving repair]
+\label{lem:no-standing-preserving-repair}
+In any system satisfying Reference, Standing, and Irreversibility, no violation of admissibility, standing, or reference can be repaired without violating at least one of those conditions.
+\end{lemma}
+
+\begin{proof}
+A purported repair can proceed only by reinterpretation, identity drift, or undoing commitment. Reinterpretation changes what the act is about and therefore violates reference. Identity drift changes which act or object is being preserved and therefore violates standing unless an explicit reset is performed. Undoing commitment violates irreversibility. No fourth repair handle remains.\cite{MaleyAMetric}
+\end{proof}
+
+\begin{theorem}[Bivalence theorem for non-degenerate reasoning]
+\label{thm:bivalence-nondegenerate-reasoning}
+If a reasoning system preserves Reference, Standing, and Irreversibility and is non-degenerate, then it must enforce fail-closed admissibility governance on the evaluated fragment. Equivalently, there is no intermediate standing-bearing status between admitted and not admitted.
+\end{theorem}
+
+\begin{proof}
+By Lemma~\ref{lem:no-standing-preserving-repair}, admissibility violations cannot be repaired post hoc while preserving reference, standing, and irreversibility. So admissibility must be enforced prior to commitment and reuse. Once such prior enforcement is in place, the evaluated fragment is governed by a fail-closed gate: an act is either admitted or it is not. Any purported third standing-relevant status would either refine admissibility by a second independent authorizer or reintroduce a repair/override mechanism. Either move contradicts the theorem family just established.\cite{MaleyAMetric}
+\end{proof}
+
+\begin{corollary}[Binary eligibility in state-transition form]
+\label{cor:binary-eligibility-state-transition}
+For the canonical update system of this section, admissibility at the governance layer is the bivalent predicate
+\[
+\mathrm{Adm}(s,a) :\iff U(s,a)\downarrow.
+\]
+Any richer evaluator contributes no further standing-bearing content unless it changes which updates are actually defined.
+\end{corollary}
+
+\begin{proof}
+If an act is inadmissible at $s$, the bivalence theorem forbids any standing-bearing successor state. So definedness of $U(s,a)$ is exactly admissibility. Any multivalued evaluator that never changes the set of defined updates is reachability-inert bookkeeping; if it does change that set, it merely selects a stricter admissible subrelation of the same update graph.\cite{MaleyAMetric}
+\end{proof}
+
+\subsection{Finite fixed-scope trajectory geometry}
+
+The path results below are internal to one fixed substrate and concern finite nonempty trajectories only. They do not re-open the later burdens of AMetric collapse, standing emergence, or quotient closure. Their role is narrower and exact: once a fixed-scope substrate with licensed same-scope transitions, lawful tensor-preserving redescription, and standing-bearing states is in place, the finite path geometry of coherence is forced.\cite{MaleyTrajectory}
+
+\begin{definition}[Legal trajectory and coherence]
+Let $(X,A,S,\rightsquigarrow,\sim,\mathrm{Ten})$ be a fixed-scope substrate of the kind recorded in \trajpaper. A finite nonempty sequence $\tau=(x_0,\dots,x_n)$ is \emph{legal} if each adjacent step $x_i\rightsquigarrow x_{i+1}$ is a licensed same-scope transition. It is \emph{coherent} if it is legal and every state on it has standing:
+\[
+\mathrm{Coherent}(\tau) :\iff \mathrm{Legal}(\tau) \wedge \forall i\le n,\ S(x_i).
+\]
+\end{definition}
+
+\begin{definition}[Prefix, extension, composition, and pointwise redescription equivalence]
+Let $\tau=(x_0,\dots,x_n)$ and $\tau'=(y_0,\dots,y_k)$.
+\begin{enumerate}
+  \item $\tau'$ is a \emph{prefix} of $\tau$ if $k\le n$ and $y_i=x_i$ for all $0\le i\le k$.
+  \item $\sigma$ is an \emph{extension} of $\tau$ if $\tau$ is a prefix of $\sigma$.
+  \item If $\tau_1=(x_0,\dots,x_m)$ and $\tau_2=(y_0,\dots,y_n)$ satisfy $x_m=y_0$, then their \emph{composition} is
+  \[
+  \tau_1\circ \tau_2 := (x_0,\dots,x_m,y_1,\dots,y_n).
+  \]
+  \item $\tau$ and $\tau'$ are \emph{pointwise redescription-equivalent}, written $\tau \approx \tau'$, if $n=k$ and $x_i \sim y_i$ for all $0\le i\le n$.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Failure witness]
+A \emph{failure witness} for a trajectory $\tau$ is an index $i \le |\tau|$ such that $\neg S(\tau_i)$. A legal trajectory is therefore coherent exactly when it contains no failure witness.
+\end{definition}
+
+\begin{proposition}[Coherence characterization]
+\label{prop:coherence-characterization}
+Let $\tau$ be a legal trajectory. Then
+\[
+\mathrm{Coherent}(\tau) \iff \forall i\le |\tau|,\ S(\tau_i).
+\]
+\end{proposition}
+
+\begin{proof}
+Since $\tau$ is assumed legal, the legality clause in the definition of coherence is already satisfied. The definition therefore reduces to the condition that every state on $\tau$ has standing at the fixed scope.\cite{MaleyTrajectory}
+\end{proof}
+
+\begin{proposition}[Failure-witness characterization]
+\label{prop:failure-witness-characterization}
+Let $\tau$ be a legal trajectory. Then
+\[
+\neg\mathrm{Coherent}(\tau) \iff \exists i\le |\tau|,\ \neg S(\tau_i).
+\]
+\end{proposition}
+
+\begin{proof}
+By Proposition~\ref{prop:coherence-characterization},
+\[
+\neg\mathrm{Coherent}(\tau) \iff \neg\forall i\le |\tau|,\ S(\tau_i).
+\]
+Because the index set $\{0,\dots,|\tau|\}$ is finite, this is equivalent to
+\[
+\exists i\le |\tau|,\ \neg S(\tau_i).
+\]
+That index is precisely a failure witness.\cite{MaleyTrajectory}
+\end{proof}
+
+\begin{lemma}[Prefix legality]
+\label{lem:prefix-legality}
+If $\mathrm{Legal}(\tau)$ and $\tau'$ is a prefix of $\tau$, then $\mathrm{Legal}(\tau')$.
+\end{lemma}
+
+\begin{proof}
+Write $\tau=(x_0,\dots,x_n)$ and $\tau'=(x_0,\dots,x_k)$ with $k\le n$. Since $\tau$ is legal, each adjacent transition $x_i\rightsquigarrow x_{i+1}$ with $0\le i<n$ already occurs in $\tau$ as a licensed same-scope step. In particular, for each $i<k$ the same transition holds inside $\tau'$. Hence $\tau'$ is legal.\cite{MaleyTrajectory}
+\end{proof}
+
+\begin{theorem}[Prefix preservation]
+\label{thm:prefix-preservation}
+If $\mathrm{Coherent}(\tau)$ and $\tau'$ is a prefix of $\tau$, then $\mathrm{Coherent}(\tau')$.
+\end{theorem}
+
+\begin{proof}
+Since $\mathrm{Coherent}(\tau)$, the trajectory $\tau$ is legal and every state on $\tau$ has standing. By Lemma~\ref{lem:prefix-legality}, every prefix $\tau'$ of $\tau$ is legal. Since each state of $\tau'$ is also a state of $\tau$, every state of $\tau'$ has standing as well. Therefore $\tau'$ is coherent.\cite{MaleyTrajectory}
+\end{proof}
+
+\begin{proposition}[Composition legality]
+\label{prop:composition-legality}
+If $\mathrm{Legal}(\tau_1)$, $\mathrm{Legal}(\tau_2)$, and $\tau_1,\tau_2$ are composable, then $\mathrm{Legal}(\tau_1\circ \tau_2)$.
+\end{proposition}
+
+\begin{proof}
+Write
+\[
+\tau_1=(x_0,\dots,x_m), \qquad \tau_2=(y_0,\dots,y_n),
+\]
+and assume $x_m=y_0$. Then
+\[
+\tau_1\circ \tau_2=(x_0,\dots,x_m,y_1,\dots,y_n).
+\]
+Within the initial block $x_0,\dots,x_m$, legality follows from $\mathrm{Legal}(\tau_1)$. Within the final block $y_1,\dots,y_n$, legality follows from $\mathrm{Legal}(\tau_2)$. At the interface, if $n\ge 1$ we need $x_m\rightsquigarrow y_1$. But $x_m=y_0$, and $\mathrm{Legal}(\tau_2)$ gives $y_0\rightsquigarrow y_1$. Hence the interface transition is licensed as well. Therefore $\tau_1\circ \tau_2$ is legal.\cite{MaleyTrajectory}
+\end{proof}
+
+\begin{theorem}[Composition closure]
+\label{thm:composition-closure}
+If $\mathrm{Coherent}(\tau_1)$, $\mathrm{Coherent}(\tau_2)$, and $\tau_1,\tau_2$ are composable, then
+\[
+\mathrm{Coherent}(\tau_1\circ \tau_2).
+\]
+\end{theorem}
+
+\begin{proof}
+Since $\mathrm{Coherent}(\tau_1)$ and $\mathrm{Coherent}(\tau_2)$, both trajectories are legal and every state in each has standing. By Proposition~\ref{prop:composition-legality}, the composite trajectory $\tau_1\circ \tau_2$ is legal. Every state of $\tau_1\circ \tau_2$ is a state of either $\tau_1$ or $\tau_2$, so every state on the composite has standing. Hence the composite is coherent.\cite{MaleyTrajectory}
+\end{proof}
+
+\begin{theorem}[Lawful redescription invariance]
+\label{thm:lawful-redescription-invariance}
+Let $\tau$ and $\tau'$ be legal trajectories. If $\tau \approx \tau'$, then
+\[
+\mathrm{Coherent}(\tau) \iff \mathrm{Coherent}(\tau').
+\]
+\end{theorem}
+
+\begin{proof}
+Write
+\[
+\tau=(x_0,\dots,x_n), \qquad \tau'=(y_0,\dots,y_n),
+\]
+so that $x_i \sim y_i$ for each $0\le i\le n$.
+
+Assume first that $\mathrm{Coherent}(\tau)$. Since $\tau$ is legal, Proposition~\ref{prop:coherence-characterization} yields $S(x_i)$ for all $0\le i\le n$. Because lawful redescription preserves standing on the fixed substrate, each relation $x_i \sim y_i$ implies
+\[
+S(x_i) \iff S(y_i).
+\]
+Hence $S(y_i)$ holds for all $i$. Since $\tau'$ is legal by hypothesis, Proposition~\ref{prop:coherence-characterization} yields $\mathrm{Coherent}(\tau')$.
+
+The converse implication is symmetric. Therefore $\mathrm{Coherent}(\tau) \iff \mathrm{Coherent}(\tau')$.\cite{MaleyTrajectory}
+\end{proof}
+
+\begin{corollary}[Tensor-determined coherence]
+\label{cor:tensor-determined-coherence}
+Let $\tau=(x_0,\dots,x_n)$ and $\tau'=(y_0,\dots,y_n)$ be legal trajectories. If
+\[
+\mathrm{Ten}(x_i)=\mathrm{Ten}(y_i) \qquad \text{for all } 0\le i\le n,
+\]
+then
+\[
+\mathrm{Coherent}(\tau) \iff \mathrm{Coherent}(\tau').
+\]
+In particular, skin-only variation does not affect coherence.
+\end{corollary}
+
+\begin{proof}
+By definition of pointwise redescription equivalence on the fixed substrate, equality of tensor content implies $x_i\sim y_i$ for each $i$, so $\tau \approx \tau'$. The result follows from Theorem~\ref{thm:lawful-redescription-invariance}.\cite{MaleyTrajectory}
+\end{proof}
+
+\begin{lemma}[Failure witnesses persist under extension]
+\label{lem:failure-witnesses-persist}
+Let $\tau$ and $\sigma$ be trajectories such that $\sigma$ extends $\tau$. If $\tau$ contains a failure witness, then $\sigma$ contains a failure witness.
+\end{lemma}
+
+\begin{proof}
+Write $\tau=(x_0,\dots,x_n)$. Since $\sigma$ extends $\tau$, there exists a representation
+\[
+\sigma=(x_0,\dots,x_n,z_1,\dots,z_m)
+\]
+for some $m\ge 0$. If $i\le n$ satisfies $\neg S(x_i)$, then the same index $i$ witnesses failure in $\sigma$ because $\sigma_i=x_i$.\cite{MaleyTrajectory}
+\end{proof}
+
+\begin{theorem}[Irrecoverability of coherence failure]
+\label{thm:irrecoverability-of-coherence-failure}
+Let $\tau$ and $\sigma$ be legal trajectories. If $\sigma$ extends $\tau$ and $\neg\mathrm{Coherent}(\tau)$, then
+\[
+\neg\mathrm{Coherent}(\sigma).
+\]
+\end{theorem}
+
+\begin{proof}
+Because $\tau$ is legal and incoherent, Proposition~\ref{prop:failure-witness-characterization} yields a failure witness on $\tau$. By Lemma~\ref{lem:failure-witnesses-persist}, that witness persists in every extension $\sigma$ of $\tau$. Since $\sigma$ is legal, Proposition~\ref{prop:failure-witness-characterization} implies $\neg\mathrm{Coherent}(\sigma)$.\cite{MaleyTrajectory}
+\end{proof}
+
+\begin{theorem}[No deferred coherence]
+\label{thm:no-deferred-coherence}
+Let $\tau$ be a legal trajectory and let $\tau'$ be a prefix of $\tau$. If
+\[
+\neg\mathrm{Coherent}(\tau'),
+\]
+then
+\[
+\neg\mathrm{Coherent}(\tau).
+\]
+\end{theorem}
+
+\begin{proof}
+By Lemma~\ref{lem:prefix-legality}, every prefix of a legal trajectory is legal; hence $\tau'$ is legal. Proposition~\ref{prop:failure-witness-characterization} then yields an index $i\le |\tau'|$ with $\neg S(\tau'_i)$. Since $\tau'$ is a prefix of $\tau$, the trajectory $\tau$ extends $\tau'$. By Lemma~\ref{lem:failure-witnesses-persist}, the same failure witness occurs in $\tau$. Because $\tau$ is legal, Proposition~\ref{prop:failure-witness-characterization} now gives $\neg\mathrm{Coherent}(\tau)$.\cite{MaleyTrajectory}
+\end{proof}
+
+\begin{theorem}[Bivalence of coherence]
+\label{thm:bivalence-of-coherence}
+For every legal trajectory $\tau$,
+\[
+\mathrm{Coherent}(\tau) \vee \neg\mathrm{Coherent}(\tau).
+\]
+\end{theorem}
+
+\begin{proof}
+Let $\tau=(x_0,\dots,x_n)$ be legal. By the bivalence theorem of the present section, each standing claim $S(x_i)$ is bivalent on the evaluated fragment. Since the index set $\{0,\dots,n\}$ is finite, either all of the formulas $S(x_i)$ hold or at least one of them fails. In the first case, Proposition~\ref{prop:coherence-characterization} yields $\mathrm{Coherent}(\tau)$. In the second case, Proposition~\ref{prop:failure-witness-characterization} yields $\neg\mathrm{Coherent}(\tau)$.\cite{MaleyTrajectory}
+\end{proof}
+
+\begin{corollary}[No partial coherence]
+\label{cor:no-partial-coherence}
+For legal trajectories, coherence is not a primitive graded or intermediate status. Every legal trajectory is either coherent or incoherent.
+\end{corollary}
+
+\begin{proof}
+This is an immediate restatement of Theorem~\ref{thm:bivalence-of-coherence}.
+\end{proof}
+
+\begin{theorem}[Exact factorization under composition]
+\label{thm:exact-factorization-under-composition}
+Let $\tau_1$ and $\tau_2$ be legal and composable. Then
+\[
+\mathrm{Coherent}(\tau_1\circ \tau_2) \iff \mathrm{Coherent}(\tau_1) \wedge \mathrm{Coherent}(\tau_2).
+\]
+\end{theorem}
+
+\begin{proof}
+Assume first that $\mathrm{Coherent}(\tau_1\circ \tau_2)$. Since $\tau_1$ is a prefix of $\tau_1\circ \tau_2$, Theorem~\ref{thm:prefix-preservation} gives $\mathrm{Coherent}(\tau_1)$.
+
+It remains to prove $\mathrm{Coherent}(\tau_2)$. Because $\tau_2$ is legal by hypothesis, it is enough by Proposition~\ref{prop:coherence-characterization} to show that every state on $\tau_2$ has standing. The interface state of $\tau_2$ is the terminal state of $\tau_1$, which appears in $\tau_1\circ \tau_2$ and therefore has standing. Every later state of $\tau_2$ also appears in the composite and therefore has standing. Hence every state on $\tau_2$ has standing, so $\tau_2$ is coherent.
+
+Conversely, if both $\tau_1$ and $\tau_2$ are coherent, then Theorem~\ref{thm:composition-closure} yields $\mathrm{Coherent}(\tau_1\circ \tau_2)$.\cite{MaleyTrajectory}
+\end{proof}
+
+\begin{corollary}[No coherence by aggregation]
+\label{cor:no-coherence-by-aggregation}
+Let $\tau_1$ and $\tau_2$ be legal and composable. If either $\tau_1$ or $\tau_2$ is incoherent, then
+\[
+\neg\mathrm{Coherent}(\tau_1\circ \tau_2).
+\]
+\end{corollary}
+
+\begin{proof}
+Suppose toward contradiction that $\mathrm{Coherent}(\tau_1\circ \tau_2)$. Then Theorem~\ref{thm:exact-factorization-under-composition} implies that both $\tau_1$ and $\tau_2$ are coherent, contrary to hypothesis.\cite{MaleyTrajectory}
+\end{proof}
+
+\begin{theorem}[Trajectory architecture fixed for later use]
+\label{thm:trajectory-architecture-fixed}
+Once the fixed-scope substrate is in place, the following finite path geometry is forced.
+\begin{enumerate}
+  \item Coherent trajectories are closed under prefix extraction and legal composition.
+  \item Lawful tensor-preserving redescription leaves coherence invariant.
+  \item If a legal prefix is incoherent, then every legal extension retaining that prefix is incoherent.
+  \item Every legal trajectory is either coherent or incoherent; no partial coherence remains.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Item (1) is exactly Theorems~\ref{thm:prefix-preservation} and \ref{thm:composition-closure}. Item (2) is Theorem~\ref{thm:lawful-redescription-invariance}. Item (3) is Theorem~\ref{thm:no-deferred-coherence}, with the stronger extension form given by Theorem~\ref{thm:irrecoverability-of-coherence-failure}. Item (4) is Theorem~\ref{thm:bivalence-of-coherence} together with Corollary~\ref{cor:no-partial-coherence}.\cite{MaleyTrajectory}
+\end{proof}
+
+\begin{remark}[Boundary of this section]
+The present section does \emph{not} yet prove the AMetric boundary, no deeper invariant, gate uniqueness, standing emergence, quotient closure, or the unique admissible interior. Those are later burdens. What is fixed here is the modeling architecture that later sections may treat as forced rather than rhetorical: state-transition form, identity persistence, irreversible commitment, fail-closed admissibility bivalence, and the finite fixed-scope trajectory form of coherence.
+\end{remark}
+

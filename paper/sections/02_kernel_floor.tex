@@ -1,0 +1,251 @@
+\section{Kernel necessity, non-derivability, and the mechanization boundary}
+\label{sec:kernel-floor}
+
+\subsection{Why the capstone begins here}
+
+The later sections of the capstone depend on a prior fact: the target class is not the class of arbitrary calculi, encodings, or transition systems, but the class of proposition-bearing, governance-assessable reasoning. Within that class, admissibility, standing, reference, and irreversibility are not optional descriptive conveniences. They are the minimal governance conditions under which reasoning remains assessable as reasoning at all. The capstone therefore begins by fixing that floor and by showing that it is forced rather than protectively chosen.
+
+\subsection{Governance-level setting}
+
+A regime is \emph{meaningful for the present target} iff its outputs are assessable as proposition-bearing reasoning acts rather than as bare symbol traces, encodings, or bookkeeping artifacts. A derivation is \emph{governance-valid} only when it is itself an admissible, standing-bearing, reference-preserving, irreversibility-governed claim-sequence. References below to ``the same meaningful regime'' are preservational rather than merely lexical: same regime means preservation of governed target, standing-bearing act-status, the admissibility boundary between licensed continuation and prohibited repair, and therefore the same class of governance-valid derivations up to lawful equivalence. The non-derivability results below are about that target and that preservational sense of sameness.\cite{MaleyFoundationalClosure,MaleyNecessity}
+
+\begin{definition}[Governance-valid derivation]
+A derivation of a governance-level proposition is \emph{governance-valid} iff the derivation is itself an admissible act-sequence: each step is reference-preserving, standing-bearing, and governed by irreversibility with respect to invalidity. In particular, a governance-valid derivation is never merely a syntactic string of transitions; it is a licit reasoning act.
+\end{definition}
+
+\begin{definition}[Kernel floor]
+Write
+\[
+K := \{\mathrm{Adm},\mathrm{St},\mathrm{Ref},\mathrm{Irr}\},
+\]
+where $\mathrm{Adm}$ abbreviates admissibility, $\mathrm{St}$ standing, $\mathrm{Ref}$ determinate reference, and $\mathrm{Irr}$ irreversibility. The capstone uses \emph{kernel floor} to mean that no faithful lower generator of this governance work exists within the same meaningful regime.
+\end{definition}
+
+\subsection{Minimal assessability boundary}
+
+\begin{theorem}[Minimal assessability boundary]
+\label{thm:minimal-assessability-boundary}
+Let $R$ be any system whose outputs are treated as propositions and whose transitions are evaluated as reasoning steps. Then determinate reference, claim-bearing standing, and non-repairable invalidity are jointly necessary and minimal for that evaluability. More exactly:
+\begin{enumerate}
+  \item if determinate reference is withdrawn, proposition identity is lost and the outputs are no longer evaluable as determinate proposition-bearing content;
+  \item if standing is withdrawn, no transition qualifies as a claim-bearing step and the outputs are no longer evaluable as reasoning steps;
+  \item if irreversibility is withdrawn, there is no stable distinction between valid continuation and retrospective rescue, and the outputs are no longer evaluable as derivations rather than retrospective normalizations; and
+  \item if an additional governance condition is imposed independently beyond those three, then the regime is governed more tightly than evaluability itself requires.
+\end{enumerate}
+Accordingly, these three conditions mark the minimal assessability boundary for proposition-bearing reasoning as such, and admissibility is the governance boundary under which their joint enforceability is secured on the same act.
+\end{theorem}
+
+\begin{proof}
+If determinate reference is removed, then no fixed proposition remains for inferential assessment. The same inscription can be read as bearing multiple incompatible contents, or no determinate content at all. What remains is a mark sequence, not a proposition-bearing act. So proposition-bearing assessment fails when reference fails.
+
+If standing is removed, then no transition counts as a licit claim-step. One may still have inscription, computation, or transformation, but not a reasoning step whose inferential role is assessable as a claim-bearing act. So reasoning-step assessment fails when standing fails.
+
+If irreversibility is removed, then invalidity is no longer fixed at act-time. A step may later be retrospectively repaired, redescribed, or normalized into apparent legitimacy without loss. In that case the distinction between licensed continuation and retrospective rescue is not stable, and what is being tracked is no longer derivation in the present sense. So derivational assessment fails when irreversibility fails.
+
+For minimality, suppose some further governance condition $Q$ is imposed independently on every proposition-bearing reasoning act. If $Q$ is already enforced by the work done jointly by reference, standing, and irreversibility, then it is not genuinely additional. If instead $Q$ excludes some acts that already satisfy those three conditions, then $Q$ contributes governance beyond what is required for proposition-bearing assessability as such. Hence reference, standing, and irreversibility are jointly necessary and minimal for evaluability as proposition-bearing reasoning. Once those three are jointly enforceable on the same act, there is already a governance boundary distinguishing licensed from non-licensed continuation and distinguishing continuation from repair. That governance-boundary status is exactly what is here called admissibility.\cite{MaleyFoundationalClosure}
+\end{proof}
+
+\begin{remark}[Why the restriction is not protective]
+The capstone does not exclude arbitrary calculi because they would threaten a preferred conclusion. It excludes them because systems that lack stable propositional identity, claim-bearing step-status, or a principled distinction between continuation and repair do not instantiate the target phenomenon in the first place. They may still implement search, update, transformation, or computation, but they are not counterexamples to a theorem about proposition-bearing reasoning.\cite{MaleyFoundationalClosure}
+\end{remark}
+
+\subsection{Kernel forcing and derivational presupposition}
+
+\begin{theorem}[Kernel forcing]
+\label{thm:kernel-forcing}
+If a meaningful regime admits non-degenerate reasoning, then the full kernel $K$ is already in force there. Equivalently, no meaningful regime supports non-degenerate reasoning while lacking admissibility, standing, reference, irreversibility, or some lawfully equivalent replacement for one of them.
+\end{theorem}
+
+\begin{proof}
+Let $R$ be a meaningful regime admitting non-degenerate reasoning. By Theorem~\ref{thm:minimal-assessability-boundary}, any regime whose outputs are assessable as proposition-bearing reasoning already requires determinate reference, claim-bearing standing, and irreversibility as the minimal assessability boundary of that evaluability. Once those three conditions are jointly enforceable on the same acts, admissibility is already in force as the governance boundary of that joint enforceability. Hence $R$ already instantiates $\mathrm{Ref}$, $\mathrm{St}$, $\mathrm{Irr}$, and $\mathrm{Adm}$. So the full kernel $K$ is already in force wherever the target phenomenon exists.\cite{MaleyFoundationalClosure}
+\end{proof}
+
+\begin{proposition}[Derivation presupposes the kernel]
+\label{prop:derivation-presupposes-kernel}
+Every governance-valid derivation already presupposes admissibility, standing, reference, and irreversibility. Derivation therefore reflects the kernel locally; it does not generate the kernel from beneath itself.
+\end{proposition}
+
+\begin{proof}
+Let $\mathrm{Der}(P)$ be a governance-valid derivation of a proposition $P$.
+
+First, such a derivation already presupposes admissibility, because a governance-valid derivation is a licit act-sequence rather than a merely syntactic trail. Without admissibility, the sequence lacks a principled governance boundary distinguishing licensed continuation from inadmissible transition.
+
+Second, it already presupposes standing, because without standing the sequence contains no claim-bearing steps. It may still be a chain of inscriptions or transitions, but it does not count as derivation.
+
+Third, it already presupposes reference, because without determinate reference the sequence does not derive determinate content. It manipulates marks without yielding a fixed proposition.
+
+Fourth, it already presupposes irreversibility, because without irreversibility invalidity can be repaired retrospectively and the distinction between valid continuation and repair collapses. The derivation would therefore lack stable governance status at act-time.
+
+So every governance-valid derivation presupposes the full kernel pointwise. It can display the kernel locally inside derivation, but it cannot first produce that kernel from a lower same-regime basis.\cite{MaleyFoundationalClosure}
+\end{proof}
+
+\subsection{Non-derivability, mutual closure, and minimality}
+
+\begin{theorem}[Kernel non-derivability]
+\label{thm:kernel-nonderivability}
+No member of $K$ is derivable from below within the same meaningful regime.
+\end{theorem}
+
+\begin{proof}
+Take the four kernel members one by one.
+
+Suppose admissibility were derivable from below. Then there would exist a governance-valid derivation of admissibility whose validity did not already presuppose admissibility or a lawfully equivalent condition. But by Proposition~\ref{prop:derivation-presupposes-kernel}, any governance-valid derivation already presupposes admissibility. So the derivation uses what it claims to produce. That is not derivation from below.
+
+Suppose standing were derivable from below. Then there would exist a governance-valid derivation of standing whose validity did not already presuppose standing. But by Proposition~\ref{prop:derivation-presupposes-kernel}, any governance-valid derivation already presupposes standing. Again the alleged derivation begins inside the very status it claims to generate.
+
+Suppose reference were derivable from below. Then there would exist a governance-valid derivation of reference whose validity did not already presuppose determinate reference. But by Proposition~\ref{prop:derivation-presupposes-kernel}, governance-valid derivation already presupposes determinate reference. So the purported derivation fails to come from below.
+
+Suppose irreversibility were derivable from below. Then there would exist a governance-valid derivation of irreversibility whose validity did not already presuppose irreversibility. But by Proposition~\ref{prop:derivation-presupposes-kernel}, the governance-validity of derivation already relies on the stable distinction between valid continuation and invalid repair. So the derivation again presupposes the condition it purports to derive.
+
+Hence no member of $K$ is derivable from below.\cite{MaleyFoundationalClosure}
+\end{proof}
+
+\begin{corollary}[No faithful lower generator]
+\label{cor:no-faithful-lower-generator}
+There exists no faithful same-regime proof system, meta-system, governance package, or lower architecture that generates the kernel from below while preserving the same meaningful regime.
+\end{corollary}
+
+\begin{proof}
+Assume, for contradiction, that some system or package $G$ generates a member $P \in K$ from a genuinely lower governance basis while preserving the same meaningful regime. By Theorem~\ref{thm:kernel-forcing}, any meaningful regime that supports non-degenerate reasoning already has the full kernel in force before the alleged generation begins. So $G$ does not produce $P$ from below; it operates only inside a regime whose meaningfulness already depends on $P$. That defeats the claim of faithful lower generation.
+
+Nor does extension help. A faithful same-domain or regime-preserving extension that claims to derive admissibility, standing, reference, or irreversibility for the original acts on the original fixed domain can do so only in one of four ways: by importing fresh same-domain authority, by becoming trivial, by violating the base goods, or by collapsing extensionally back to the gate or kernel work already in force. None of those is a faithful lower derivation. Thus there is no faithful lower generator either internally or by same-domain extension.\cite{MaleyFoundationalClosure,MaleyNecessity}
+\end{proof}
+
+\begin{theorem}[The kernel floor is derived rather than axiomatic]
+\label{thm:kernel-floor-derived}
+In the present capstone the primitive governance terms are not introduced as arbitrary axioms. Their governance work is mathematically forced by the minimal assessability boundary, kernel forcing, and kernel non-derivability. Accordingly, falsifying the kernel floor requires more than proposing an alternative vocabulary or proof format: it requires a faithful lower derivation of admissibility, standing, reference, and irreversibility from below within the same meaningful regime.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:minimal-assessability-boundary} shows that reference, standing, and irreversibility are the minimal assessability boundary of proposition-bearing reasoning. The same theorem also identifies admissibility as the governance boundary of their joint enforceability. Theorem~\ref{thm:kernel-forcing} then shows that any meaningful regime admitting non-degenerate reasoning already instantiates that full governance package. Theorem~\ref{thm:kernel-nonderivability} and Corollary~\ref{cor:no-faithful-lower-generator} show that no same-regime lower generator exists for any kernel member and that changing proof format, meta-level, or same-domain formal dress does not remove that obstruction.
+
+So the capstone does not posit the kernel as an arbitrary axiom cluster. It records a forced floor. To dislodge that floor, one would have to exhibit exactly what these theorems rule out: a faithful lower derivation of the kernel inside the same meaningful regime. Alternative notation, alternate packaging, or a change of formal clothing does not meet that burden.
+\end{proof}
+
+\begin{theorem}[Architecture exhaustion at the kernel floor]
+\label{thm:kernel-architecture-exhaustion}
+Within the target class fixed by the minimal assessability boundary, no alternative admissibility architecture survives as a genuinely distinct same-regime basis for proposition-bearing reasoning. More precisely, any purported counterarchitecture does exactly one of the following:
+\begin{enumerate}
+  \item it changes the target phenomenon by abandoning proposition-bearing assessability, stable reference, claim-bearing standing, or irreversibility;
+  \item it imports, hides, redistributes, or launders the same governance work under another name, level, or same-domain authority source; or
+  \item it collapses extensionally to the same kernel package already fixed above.
+\end{enumerate}
+There is no fourth same-regime architecture.
+\end{theorem}
+
+\begin{proof}
+Let $A$ be a purported alternative same-regime basis for proposition-bearing reasoning.
+
+If $A$ omits any member of $K$, then Theorem~\ref{thm:minimal-assessability-boundary} applies immediately. If the omitted governance work is genuinely absent, then proposition-bearing assessability fails: one loses determinate reference, claim-bearing standing, or irreversibility, and the target phenomenon changes. If instead the omitted work reappears elsewhere in $A$, then the omission was only apparent: the same governance burden has been redistributed, renamed, or deferred. So omission yields either phenomenon-change or hidden re-expression of the same governance work.
+
+Now suppose $A$ retains the full governance work of admissibility, standing, reference, and irreversibility but claims to organize it through a genuinely lower or distinct same-regime basis. Then Theorem~\ref{thm:kernel-nonderivability} and Corollary~\ref{cor:no-faithful-lower-generator} apply. A same-regime lower basis is impossible because the kernel is already in force wherever the target phenomenon exists. If $A$ tries to rescue the claim by same-domain extension, that route is also closed: the extension either imports new same-domain authority, becomes trivial, violates the base goods, or collapses extensionally back to the original gate or kernel work. None of those yields a genuinely distinct same-regime architecture.
+
+These cases are exhaustive. A purported alternative basis either changes the phenomenon, hides the same governance work under another presentation, or coincides extensionally with the already fixed kernel floor. No fourth same-regime architecture remains.\cite{MaleyFoundationalClosure,MaleyNecessity}
+\end{proof}
+
+\subsubsection*{Inline proof anchor I: kernel-floor exhaustion}
+
+The inlined forcing chain carried by this section has five steps.
+\begin{enumerate}
+  \item \emph{Assessability floor.} If determinate reference is withdrawn, no determinate proposition remains; if standing is withdrawn, no step counts as a licit claim-bearing step; and if irreversibility is withdrawn, the distinction between licensed continuation and retrospective rescue is no longer fixed at act-time. These are therefore not optional enrichments of reasoning but the weakest conditions under which proposition-bearing reasoning is assessable as reasoning at all.
+  \item \emph{Admissibility as joint-enforceability boundary.} Once reference, standing, and irreversibility are jointly enforceable on the same act, there is already a governance boundary distinguishing licensed continuation from prohibited repair. That boundary is exactly admissibility. Admissibility is therefore not an additional fifth ingredient appended after the fact; it is the governance form of the joint enforceability of the other three goods.
+  \item \emph{Kernel forcing.} Any meaningful regime that genuinely instantiates non-degenerate reasoning already carries $\{\mathrm{Adm},\mathrm{St},\mathrm{Ref},\mathrm{Irr}\}$, or a lawfully equivalent package, before any internal derivation begins. In that sense the kernel is regime-level prior to derivation rather than a theorem derived inside derivation.
+  \item \emph{Derivational shadow.} Governance-valid derivation cannot sit beneath the kernel, because the validity of such derivation already presupposes admissibility, standing, reference, and irreversibility pointwise. So an alleged lower derivation of the kernel begins inside the very governance structure it claims to generate.
+  \item \emph{Architecture trichotomy.} Let $A$ be a purported same-regime alternative basis for proposition-bearing reasoning. If $A$ omits some member of $K$, then either the target phenomenon changes or the omitted governance work is merely recovered elsewhere under another name or level. If $A$ retains the full governance work while claiming to be a genuinely lower basis, kernel forcing and non-derivability immediately collapse that claim: $A$ is at most extensionally identical with the fixed kernel package.
+\end{enumerate}
+Hence the kernel is not a presentational choice-point. Inside the target class, every same-regime alternative either changes the phenomenon, hides the same governance work under another presentation, or collapses extensionally to the kernel floor. That is the exact proof burden now carried directly by Theorem~\ref{thm:kernel-architecture-exhaustion}.\cite{MaleyFoundationalClosure,MaleyNecessity}
+
+The restriction to meaningful regimes is not a protective narrowing but an identification of the maximal domain in which proposition-bearing reasoning is assessable as reasoning for the present target; systems outside that domain do not instantiate the target phenomenon at all.
+
+\begin{theorem}[Scope exhaustion for non-degenerate reasoning]
+\label{thm:scope-exhaustion}
+Let $\mathcal{R}$ be the class of meaningful regimes for the present target, namely those in which inferential outputs are assessable as proposition-bearing reasoning acts under admissibility-invariant use.
+
+Any purported counterexample to the uniqueness and forced-consequence results of this manuscript must fall into exactly one of the following classes:
+\begin{enumerate}
+  \item \textbf{Same-regime counterexample.} The system lies within $\mathcal{R}$ and satisfies non-degenerate reasoning. Then, by Theorem~\ref{thm:kernel-forcing} and the closure results above, the full kernel $K=\{\mathrm{Adm},\mathrm{St},\mathrm{Ref},\mathrm{Irr}\}$ is already in force, and the system falls under the same closure structure. Hence the purported counterexample collapses.
+  \item \textbf{Lower-generator construction.} The system purports to derive some $P\in K$ from a strictly lower same-regime basis. This is impossible by Theorem~\ref{thm:kernel-nonderivability} and Corollary~\ref{cor:no-faithful-lower-generator}.
+  \item \textbf{Regime-exiting construction.} The system fails to instantiate non-degenerate reasoning, i.e. it abandons at least one of determinate reference, standing-bearing act status, or irreversibility. In that case the system no longer lies in $\mathcal{R}$ and does not instantiate the target phenomenon addressed by the present results.
+\end{enumerate}
+These cases are exhaustive. Therefore no counterexample exists.
+\end{theorem}
+
+\begin{proof}
+Let $S$ be any purported counterexample. If $S$ lies within $\mathcal{R}$ and still instantiates non-degenerate reasoning, then Theorem~\ref{thm:kernel-forcing} places the full kernel in force there already. But once the kernel is in force, the architecture-exhaustion, mutual-closure, and minimality results of this section apply to $S$ exactly as they do to every other same-regime case. So $S$ is not a genuine counterexample but only a same-regime instance of the already fixed closure structure.
+
+If instead $S$ claims to escape by generating some member of $K$ from a strictly lower same-regime basis, then Theorem~\ref{thm:kernel-nonderivability} and Corollary~\ref{cor:no-faithful-lower-generator} rule that out directly: no faithful lower generator exists within the same meaningful regime.
+
+The only remaining possibility is that $S$ abandons one or more of determinate reference, standing-bearing act status, or irreversibility. But by Theorem~\ref{thm:minimal-assessability-boundary}, those are exactly the minimal conditions under which proposition-bearing reasoning is assessable as reasoning for the present target. So abandoning them exits the target domain rather than producing a counterexample inside it.
+
+These three cases exhaust the possibilities. Hence no counterexample to the uniqueness and forced-consequence results exists.
+\end{proof}
+
+
+\begin{theorem}[Non-kernel systems collapse or exit]
+\label{thm:non-kernel-collapse-or-exit}
+Let $\Sigma$ be any system presented as a putative form of reasoning for the present target. If $\Sigma$ appears to violate one or more members of the kernel $K=\{\mathrm{Adm},\mathrm{St},\mathrm{Ref},\mathrm{Irr}\}$, then exactly one of the following holds:
+\begin{enumerate}
+  \item \textbf{Degeneracy.} $\Sigma$ fails to instantiate non-degenerate reasoning, because it lacks determinate reference, standing-bearing act-status, irreversibility, or the joint enforceability boundary under which those conditions can function together.
+  \item \textbf{Extensional collapse.} $\Sigma$ preserves the target phenomenon after all, in which case the apparently non-kernel structure is only presentational and the system is extensionally governed by the same kernel architecture already fixed by Theorems~\ref{thm:kernel-forcing}, \ref{thm:kernel-architecture-exhaustion}, and~\ref{thm:scope-exhaustion}.
+\end{enumerate}
+No third possibility exists. In particular, there is no system that both genuinely violates the kernel and still instantiates the target phenomenon as a distinct non-degenerate reasoning regime.
+\end{theorem}
+
+\begin{proof}
+Let $\Sigma$ be any putative reasoning system for the present target.
+
+If $\Sigma$ genuinely lacks one of admissibility, standing, reference, or irreversibility in the sense relevant to the present manuscript, then by Theorem~\ref{thm:minimal-assessability-boundary} it loses the conditions under which proposition-bearing reasoning is assessable as reasoning at all. Such a system may still implement calculation, transformation, update, bookkeeping, or search, but it does not instantiate non-degenerate reasoning for the present target. So we are in case~(1).
+
+Assume instead that $\Sigma$ is still offered as a genuine instance of the same target phenomenon. Then, by Theorem~\ref{thm:kernel-forcing}, the full kernel is already in force wherever non-degenerate reasoning exists. Any apparent non-kernel feature of $\Sigma$ must therefore either hide the same governance work under another presentation, redistribute it across levels, or collapse extensionally to the same admissibility/standing/reference/irreversibility package already fixed. By Theorem~\ref{thm:kernel-architecture-exhaustion}, no genuinely distinct same-regime admissibility architecture survives; by Theorem~\ref{thm:scope-exhaustion}, any apparent counterexample must either collapse inside the same regime or exit the target altogether. So we are in case~(2).
+
+These alternatives are exhaustive. Therefore any putative non-kernel system either collapses into degeneracy or is extensionally governed by the same kernel architecture. There is no third non-degenerate, same-target possibility.
+\end{proof}
+
+\begin{corollary}[No distinct non-kernel reasoning architecture]
+Any system that appears to violate the kernel either fails to instantiate non-degenerate reasoning or else is extensionally equivalent, for the present target, to a kernel-governed regime. Consequently there is no distinct non-kernel architecture of proposition-bearing reasoning for the phenomenon studied here.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:non-kernel-collapse-or-exit}.
+\end{proof}
+
+\begin{remark}[The theorem-level force of the kernel floor]
+The preceding theorem does not merely record that the capstone begins from a preferred vocabulary. It says that, for the target phenomenon fixed here, no same-regime derivation, weaker governance package, or faithful same-domain extension can generate admissibility, standing, reference, or irreversibility as lower achievements of that very regime. In that sense the kernel floor is a theorem-level boundary, not a temporary stopping point. The downstream AMetric, standing-regime, and same-domain meta-closure sections then ask the narrower question of what architecture remains once that floor is already fixed.
+\end{remark}
+
+\begin{proposition}[Mutual closure]
+\label{prop:kernel-mutual-closure}
+None of the members of $K$ can be coherently asserted while denying the governance role of the others.
+\end{proposition}
+
+\begin{proof}
+Admissibility without standing would not govern claim-bearing acts; it would govern at most transitions stripped of licit claim-status. Standing without reference would license empty or equivocal claims rather than determinate claim-content. Governed reference without irreversibility would fail to fix content for inferential use at act-time, because later repair could retroactively alter the force of the act. Governance irreversibility without admissibility would lose the principled distinction between licensed continuation and prohibited repair, and would therefore cease to be governance irreversibility in the relevant sense. So each member depends on the governance role of the others, and the kernel is mutually closed as one necessity set.\cite{MaleyFoundationalClosure}
+\end{proof}
+
+\begin{corollary}[Minimality]
+\label{cor:kernel-minimality}
+No proper subset of $K$ suffices for non-degenerate reasoning.
+\end{corollary}
+
+\begin{proof}
+Assume some proper subset $K_0 \subsetneq K$ suffices. Let $X \in K \setminus K_0$ be omitted. Then either $X$ is unnecessary or $X$ is generated from the remaining members. The first option contradicts Proposition~\ref{prop:kernel-mutual-closure}, since the governance role of each member depends on the others. The second contradicts Theorem~\ref{thm:kernel-nonderivability}, since $X$ would then be derivable from below from a strictly smaller basis. Therefore no proper subset suffices.
+\end{proof}
+
+\subsection{Mechanization boundary}
+
+\begin{theorem}[Mechanization boundary]
+\label{thm:mechanization-boundary}
+A faithful mechanization of the present framework begins at the consequence layer rather than by attempting to generate the kernel from below.
+\end{theorem}
+
+\begin{proof}
+Any meaningful proof system is itself a regime in which proof acts are proposition-bearing reasoning acts. By Theorem~\ref{thm:kernel-forcing}, such a regime already has the kernel in force. So no proof assistant, meta-system, or internal formal layer can faithfully generate admissibility, standing, reference, or irreversibility as fresh lower theorems while remaining within the same meaningful regime. Any such attempt is only a restatement, encoding, or circular recapture of what is already presupposed.
+
+Once the kernel is fixed, however, the situation changes. Preservation theorems, transport results, collapse theorems, irrecoverability results, uniqueness theorems, and related consequence families are ordinary derivable mathematics internal to the fixed-kernel regime. Those are proper targets of machine verification. So the principled formalization boundary lies exactly here: the kernel is a governance-level floor; the downstream consequence architecture is mechanizable.\cite{MaleyFoundationalClosure}
+\end{proof}
+
+\begin{fixedbox}
+\textbf{What the capstone may now treat as fixed.} Later sections may use, without reopening, the following facts: the target class is forced rather than protective; the full kernel is already in force wherever the target phenomenon exists; no faithful lower generator exists within the same meaningful regime or by faithful same-domain extension; the kernel is mutually closed and minimal; and faithful mechanization begins only once that floor is fixed.
+\end{fixedbox}
+
+Any system that appears to violate these results must either fail to instantiate inferentially governed proposition-bearing reasoning or collapse extensionally into a system satisfying the kernel.

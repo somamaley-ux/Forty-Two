@@ -1,0 +1,127 @@
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{ragged2e}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{etoolbox}
+\usepackage{url}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[nameinlink,noabbrev]{cleveref}
+
+\definecolor{Accent}{HTML}{123B63}
+\definecolor{AccentDark}{HTML}{0B2740}
+\definecolor{AccentLight}{HTML}{EAF1F8}
+\definecolor{RuleGray}{HTML}{C8D3DF}
+\definecolor{TextGray}{HTML}{4A5568}
+\definecolor{SoftGreen}{HTML}{EEF6F1}
+\definecolor{SoftAmber}{HTML}{FDF5E6}
+\definecolor{SoftRed}{HTML}{FBEDEE}
+\definecolor{SoftBlue}{HTML}{F4F8FC}
+
+\hypersetup{
+  colorlinks=false,
+  linkcolor=Accent,
+  citecolor=Accent,
+  urlcolor=Accent,
+  pdftitle={42: Exhaustion, Closure, and Downstream Consequence},
+  pdfauthor={Amos Jay Maley}
+}
+\hypersetup{pdfborder={0 0 0}}
+\setstretch{1.08}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.65em}
+\setlist[itemize]{leftmargin=1.5em,itemsep=0.3em,topsep=0.2em}
+\setlist[enumerate]{leftmargin=1.6em,itemsep=0.35em,topsep=0.25em}
+
+\titleformat{\section}{\Large\bfseries}{\thesection}{0.7em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{0.65em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{1.4em}{0.55em}
+\titlespacing*{\subsection}{0pt}{1.1em}{0.4em}
+\titlespacing*{\subsubsection}{0pt}{0.9em}{0.25em}
+
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{P}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\Centering\arraybackslash}p{#1}}
+
+\tcbset{boxrule=0pt,arc=2pt,left=8pt,right=8pt,top=7pt,bottom=7pt,colframe=Accent,colback=SoftBlue}
+\newtcolorbox{phasebox}{colback=AccentLight,colframe=AccentDark}
+\newtcolorbox{fixedbox}{colback=SoftGreen,colframe=AccentDark}
+\newtcolorbox{reviewbox}{colback=SoftAmber,colframe=AccentDark}
+\newtcolorbox{riskbox}{colback=SoftRed,colframe=AccentDark}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{importnote}[theorem]{Import note}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\setlength{\headheight}{24pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textcolor{TextGray}{\textit{\ProjectTitleWords}}}
+\fancyhead[R]{\textcolor{TextGray}{\thepage}}
+\fancyfoot[C]{}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{RuleGray}\leaders\hrule height \headrulewidth\hfill}}
+
+\newcommand{\ProjectTitle}{42}
+\newcommand{\ProjectTitleWords}{Forty-Two}
+\newcommand{\ProjectSubtitle}{Exhaustion, Closure, and Downstream Consequence}
+\newcommand{\ProjectDate}{14 April 2026}
+\newcommand{\ManuscriptStatus}{Zenodo consequence-atlas version prepared from the declared source surface.}
+
+\newcommand{\fcas}{\emph{Foundational Closure of Admissibility and Standing}}
+\newcommand{\ametric}{\emph{The AMetric Boundary: Necessity, Non-Parameterization, and Closure by Exhaustion}}
+\newcommand{\trajpaper}{\emph{The Mathematics of Coherent Reasoning: A Bivalent Trajectory Theory}}
+\newcommand{\blueprint}{\emph{Unified Capstone Skeleton Blueprint}}
+
+\newcommand{\necessitypaper}{\emph{Necessity of Admissibility in Non-Degenerate Compositional Systems}}
+\newcommand{\necessitydoc}{\necessitypaper}
+\newcommand{\unusdoc}{\emph{Unus Solus Possibilis Est}}
+\newcommand{\atsdoc}{\emph{Anchor / Tensor / Skin: A Role Decomposition for Admissible Description}}
+\newcommand{\sameoperatorsdoc}{\emph{Closure by Exhaustion for Same-Scope Operators under Admissibility}}
+\newcommand{\fixedbasedoc}{\emph{Fixed-Base Exhaustion for Internal Operators}}
+\newcommand{\clausuradoc}{\emph{Clausura Ex Necessitate Structurae}}
+\newcommand{\structuradoc}{\emph{Structura Ex Necessitate Standardis Modelis}}
+\newcommand{\measurementdoc}{\emph{The Measurement Problem as a Problem of Reference}}
+\newcommand{\standeqdoc}{\emph{Standing--Admissibility Equivalence}}
+\newcommand{\exhaustiondoc}{\emph{The Exhaustion Theorem}}
+\newcommand{\eademdoc}{\emph{Eadem Natura, Duo Spectra}}
+\newcommand{\navierstokesdoc}{\emph{Carrier Universality and Global Smoothness for the Periodic 3D Navier--Stokes Equations}}
+\newcommand{\yangmillsdoc}{\emph{Vacuum-sector Mass Gap for the Local Gauge-Invariant Sharp-Local Yang--Mills Net}}
+\newcommand{\ymcompanionone}{\emph{Companion I: Ultraviolet Gate and Route~1 Mass-Gap Chain}}
+\newcommand{\ymcompaniontwo}{\emph{Companion II: Lane A Sharp-Local Construction}}
+\newcommand{\ymcompanionthree}{\emph{Companion III: Reconstruction, Non-Triviality, and Faithful-Wilson Universality}}
+\newcommand{\nsdoc}{\navierstokesdoc}
+\newcommand{\ymmaindoc}{\yangmillsdoc}
+\newcommand{\noninstgodeldoc}{\emph{Non-Instantiability of G\"odel Incompleteness in the Unique Admissible Interior}}
+\newcommand{\gaugeconstraintdoc}{\emph{Admissibility and the Structural Origin of Gauge and Constraint Dynamics}}
+\newcommand{\entanglementdoc}{\emph{Quantum Entanglement as Boundary-Level Compatibility}}
+\newcommand{\beginningdoc}{\emph{Beginning of the Admissible Interior}}
+\newcommand{\interiorenddoc}{\emph{End of the Admissible Interior}}
+\newcommand{\baryogenesisdoc}{\emph{Matter--Antimatter Asymmetry as a Standing Constraint: Baryogenesis Under Admissible Cosmic Evolution}}
+\newcommand{\blackholesdoc}{\emph{Black Holes Without Interior Facts}}
+\newcommand{\lifedoc}{\emph{Standing Localization and the Structural Inevitability of Life}}
+\newcommand{\minddoc}{\emph{Mind as a Structurally Rigid Interface of Admissible Evaluation}}
+\newcommand{\metanecessitydoc}{\emph{Meta-Necessity of Admissibility: A Proof-of-Proof for the Maley Corpus}}
+\newcommand{\metamysterydoc}{\emph{The Meta--Mystery Theorem and the Dark Sector Eliminative Principle}}

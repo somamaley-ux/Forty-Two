@@ -1,0 +1,21 @@
+Forty Two Exhaustion, Closure, and Downstream Consequence
+Standalone axiom audit note
+
+- package build target: `lake build`
+- dedicated audit target:
+  `lake env lean Checks\\Axiom\\UnifiedCapstoneAxiomCheck.lean`
+
+Audit summary:
+
+- the paper-facing theorem surface builds successfully
+- the generic capstone protocol system builds successfully
+- the concrete capstone instantiation builds successfully
+- the support-backed concrete capstone instantiation builds successfully
+- the strongest published routes in the package are axiom-free
+
+Important note:
+
+- the support-backed capstone path is linked to actual imported theorem surfaces
+  already carried in the package
+- the package is manuscript-facing and audit-facing rather than a claim of
+  maximal object-level internalization of every companion source

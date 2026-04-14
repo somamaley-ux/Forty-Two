@@ -1,0 +1,325 @@
+\section{Operator exhaustion and mathematics closure}
+\label{sec:operator-exhaustion}
+
+\subsection{Why the capstone can now turn to operators}
+
+Section~\ref{sec:standing-regime} fixed the proof-bearing center on which later closure depends: a unique same-scope gate, standing emergence as reuse-stable admissibility, standing conservation, standing-quotient uniqueness, the no-second-closure-relevant-equivalence theorem, the unique admissible interior, and the compressed closure claim of Theorem~\ref{thm:admissibility-architecture-closure} that no alternative same-domain admissibility architecture survives once that interface package is in place. Once that closure layer is in place, the next and unavoidable question is whether mathematics can reopen the interior by operator means. The point of the present section is to show that it cannot. The burden is not to deny the legitimacy of completion, forcing, compactness, saturation, universal constructions, or readback arguments. The burden is narrower and more exact: to classify their fixed-scope status once the admissible interior is already fixed, and to show that no same-scope operator family yields new standing-bearing power there.
+
+The local proof surface for this section is carried primarily by \sameoperatorsdoc{} together with the conservative-extension and post-closure collapse results of \clausuradoc{}; the older fixed-base presentation is retained only as a predecessor and cross-check, and no later synthesis paper is used here as an independent theorem engine.\cite{MaleySameScopeOps,MaleyClausura,MaleyFixedBase,MaleyAMetric,MaleyEadem}
+
+\subsection{Standing-bearing carrier and same-scope operator setting}
+
+\begin{definition}[Fixed admissibility base]
+A \emph{fixed admissibility base} is a triple
+\[
+B=(X,\Omega,\mathcal A),
+\]
+where $X$ is a carrier, $\Omega$ is a family of partial operations on $X$, and $\mathcal A$ is the admissibility regime specifying which primitive applications and compositions count as licensed on that carrier. In the capstone, this language is the operator-side translation of the same-scope standing regime already fixed in Section~\ref{sec:standing-regime}: ``old-base-relevant content'' means the previously admitted same-scope content of the fixed interior.
+\end{definition}
+
+\begin{definition}[same-scope admissible extension]
+Let $B=(X,\Omega,\mathcal A)$ be a fixed admissibility base. An admissible extension
+\[
+B^{\ast}=(X^{\ast},\Omega^{\ast},\mathcal A^{\ast})
+\]
+is \emph{same-scope} iff it is presented as preserving $X$ as the standing-bearing carrier under discussion rather than openly replacing $X$ by a quotient, completion, extension, new ambient structure, or new admissibility-bearing regime.
+\end{definition}
+
+\begin{definition}[Carrier-preserving operator]
+A purported operator $F$ on admissible inputs from $X$ is \emph{carrier-preserving} if it is presented as acting on that same base carrier $X$ rather than by openly replacing $X$ with a quotient, completion, extension, new ambient structure, or new same-scope gate.
+\end{definition}
+
+\begin{definition}[Conservative action on old-base-relevant content]
+A purported operator or redescription on $B=(X,\Omega,\mathcal A)$ acts \emph{conservatively on old-base-relevant content} if it adds no new values for old operations on old tuples and no new same-scope consequences about the old base beyond those already fixed by the original regime.
+\end{definition}
+
+\begin{definition}[Internally fixed auxiliary datum]
+Let $x\in X$ be an admissible input. An auxiliary datum $a(x)$ is \emph{internally fixed over $x$} if every admissibility-preserving redescription of the base that leaves the standing content of $x$ unchanged also leaves $a(x)$ unchanged, up to the normalizations already licensed by the regime. If the relevant datum is not internally fixed in that sense, it is \emph{external}: it must be supplied by a selector, witness, evaluator, comparison map, completion rule, generic object, transfer criterion, or other ambient structure not already fixed by the base.
+\end{definition}
+
+\begin{lemma}[Old-graph change is non-conservative]
+\label{lem:old-graph-change-nonconservative}
+Let $A=(X,\Omega)$ and let $A^{\ast}=(X^{\ast},\Omega^{\ast})$ be an admissible extension. Suppose there exist $\omega\in\Omega$ of arity $n$ and $\bar a\in X^n$ such that
+\[
+\bar a\notin\operatorname{dom}(\omega)\quad\text{but}\quad \bar a\in\operatorname{dom}(\omega^{\ast}).
+\]
+Then the induced partial-algebra structure on the old carrier $X$ has changed. In particular, the maneuver is not conservative on the standing-bearing carrier.
+\end{lemma}
+
+\begin{proof}
+The graph of a primitive operator on $X$ is part of the partial-algebra structure carried by $X$. If $\bar a$ was previously outside $\operatorname{dom}(\omega)$ but becomes defined under $\omega^{\ast}$, then the graph of the old primitive has been enlarged on old data. That is a change in the induced partial-algebra structure on $X$, not a mere notational enrichment.
+\end{proof}
+
+\begin{lemma}[Domain fixity on the standing-bearing carrier]
+\label{lem:domain-fixity-standing-bearing}
+Let $A=(X,\Omega)$ be a nondegenerate partial algebra, and let $A^{\ast}=(X^{\ast},\Omega^{\ast})$ be a same-scope admissible extension. Then for every $\omega\in\Omega$ of arity $n$,
+\[
+\operatorname{dom}(\omega^{\ast})\cap X^n=\operatorname{dom}(\omega).
+\]
+\end{lemma}
+
+\begin{proof}
+Because $\omega$ is the restriction of $\omega^{\ast}$, every old defined tuple remains defined, so
+\[
+\operatorname{dom}(\omega)\subseteq \operatorname{dom}(\omega^{\ast})\cap X^n.
+\]
+Assume the inclusion is strict. Then some tuple $\bar a\in X^n$ is newly defined in the extension. By Lemma~\ref{lem:old-graph-change-nonconservative}, the induced partial-algebra structure on the old carrier $X$ has changed. But a same-scope admissible extension is presented precisely as preserving $X$ as the same standing-bearing carrier. Changing the primitive graph on $X$ is therefore not lawful redescription but an actual change of scope. Hence strict enlargement is impossible, and equality follows.
+\end{proof}
+
+\begin{theorem}[No internal totalization]
+\label{thm:no-internal-totalization}
+Let $B=(X,\Omega,\mathcal A)$ be a nondegenerate fixed admissibility base. No same-scope carrier-preserving extension of $B$ totalizes a genuinely partial old operation on old tuples.
+\end{theorem}
+
+\begin{proof}
+Suppose some old primitive $\omega\in\Omega$ is partial on $X$ but becomes total on old tuples in a same-scope carrier-preserving extension. Then
+\[
+\operatorname{dom}(\omega^{\ast})\cap X^n=X^n
+\]
+while
+\[
+\operatorname{dom}(\omega)\subsetneq X^n.
+\]
+This contradicts Lemma~\ref{lem:domain-fixity-standing-bearing}. So no same-scope carrier-preserving extension totalizes a genuinely partial old operation on old tuples.
+\end{proof}
+
+\begin{corollary}[No post hoc repair and no deferred admissibility on old tuples]
+\label{cor:no-posthoc-repair-no-deferred-admissibility}
+If an old tuple is outside the domain of an old operation at the stage of formation, no later same-scope carrier-preserving extension makes that old application defined on the same old data. In particular, an undefined operator application on the standing-bearing carrier cannot be rendered admissible after the fact by same-scope extension.
+\end{corollary}
+
+\begin{proof}
+Any such repair or deferral would have to turn a previously undefined old tuple into a newly defined one for an old primitive on the old carrier. That is exactly the graph change forbidden by Lemma~\ref{lem:domain-fixity-standing-bearing} and Theorem~\ref{thm:no-internal-totalization}.
+\end{proof}
+
+\begin{theorem}[Auxiliary-data dichotomy]
+\label{thm:aux-data-dichotomy}
+Let $F$ be a carrier-preserving operator on admissible input $x\in X$ for a fixed base $B=(X,\Omega,\mathcal A)$. Suppose the old-base-relevant effect of $F(x)$ is determined, up to conservative action on old-base-relevant content, by $x$ together with an auxiliary datum $a(x)$. Then exactly one of the following holds.
+\begin{enumerate}
+  \item If $a(x)$ is internally fixed over $x$, then $F$ acts conservatively on the old base.
+  \item If $a(x)$ is external, then $F$ is not internal to the base structure.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+If $a(x)$ is internally fixed, then admissibility-preserving redescription leaves it unchanged wherever the standing content of $x$ is unchanged. So the effect of $F$ contributes no genuinely new distinction beyond what was already fixed by the base together with $x$. In that case $F$ only reorganizes or reads off previously fixed content and is therefore conservative on the old base.
+
+If $a(x)$ is external, then the effect of $F$ depends essentially on a datum not determined by the old base together with $x$. The operator's effect is then not fixed by the base alone, so it is not internal to that base. No third option remains.
+\end{proof}
+
+\subsection{Finite exhaustion of totalization and standing-extension moves}
+
+\begin{definition}[Covered totalization mechanisms]
+A purported strategy for rendering a partial operator total on the standing-bearing carrier falls under the following covered mechanisms whenever it uses the corresponding move.
+\begin{enumerate}
+  \item \textbf{Domain enlargement.} Old tuples on the standing-bearing carrier become newly defined.
+  \item \textbf{Carrier collapse.} The effective carrier is changed by quotient, identification, completion, or replacement.
+  \item \textbf{Evaluative completion.} A new global evaluator, comparison rule, semantic predicate, limit device, metric, measure, probability rule, or analogous decision procedure settles cases previously undefined on the old carrier.
+  \item \textbf{Conservative definitional extension.} Only notation or abbreviatory language changes.
+  \item \textbf{Non-conservative family change.} The operator family or admissibility regime is altered in a way not reducible to the first four mechanisms.
+\end{enumerate}
+\end{definition}
+
+\begin{lemma}[Finite exhaustion of totalization moves]
+\label{lem:finite-exhaustion-totalization-moves}
+Let $\tau$ be a purported same-scope strategy that renders a partial operator total on the standing-bearing carrier. Then $\tau$ falls under at least one of the five covered mechanisms above.
+\end{lemma}
+
+\begin{proof}
+A successful totalization must make some previously undefined input evaluable. Inspect the first point at which the strategy differs from the original regime. If an old tuple on the standing-bearing carrier becomes newly defined, the move is domain enlargement. If old undefinedness disappears only because the object under discussion has been identified, collapsed, or replaced, the move is carrier collapse. If the old input is decided by adjoining an evaluator, semantic predicate, comparison totality, limit device, metric, measure, or probability rule, the move is evaluative completion. If none of those changes occurs and the only modification is notational, the move is conservative definitional extension. The only remaining possibility is that the strategy changes the governing operator family or admissibility regime in a way not captured by pure notation, which is non-conservative family change. Therefore every same-scope totalization attempt is covered.
+\end{proof}
+
+\begin{proposition}[Disposition of the covered mechanisms]
+\label{prop:disposition-covered-mechanisms}
+Within the standing-relative framework fixed by Sections~\ref{sec:ametric-boundary} and \ref{sec:standing-regime}, each covered mechanism is blocked or vacuous.
+\begin{enumerate}
+  \item Domain enlargement is forbidden by Theorem~\ref{thm:no-internal-totalization}.
+  \item Carrier collapse changes the carrier and so is not a same-scope extension of the original algebra.
+  \item Evaluative completion hits the AMetric boundary and therefore presupposes an imported evaluator or other same-scope boundary-side authority.
+  \item Conservative definitional extension is bookkeeping and leaves undefinedness unchanged.
+  \item Non-conservative family change is an open regime change rather than an internal same-scope strengthening of the original base.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Clause~(1) is exactly the old-graph obstruction already proved. Clause~(2) is immediate from the same-scope convention fixed above. Clause~(3) decides old undefined cases by adjoining a standing-relevant evaluator not generated by the standing-bearing carrier; that is boundary selector work or imported authority and is blocked by the AMetric boundary and the no-carriers theorem of Section~\ref{sec:standing-regime}. Clause~(4) alters only language, so by definition it cannot change domains or make an old undefined tuple defined. Clause~(5) changes the operator family or admissibility policy itself and is therefore an explicit change of regime rather than a same-scope extension.
+\end{proof}
+
+\begin{theorem}[Finite exhaustion schema for same-scope standing-extension]
+\label{thm:finite-exhaustion-schema}
+Every same-scope standing-extending operator attempt falls under at least one of the five covered mechanisms stated just above. Each covered mechanism is blocked or vacuous. Consequently, no same-scope operator can totalize old undefined applications, repair standing on the old carrier, or otherwise enlarge standing-bearing coverage on the original scope.
+\end{theorem}
+
+\begin{proof}
+Any same-scope standing-extending operator attempt must do at least one of the following: make an old undefined tuple newly defined, change the carrier on which admissibility is measured, add a new evaluator or completion device to settle old undefinedness, claim only notational enrichment, or alter the governing operator family or admissibility regime. By Lemma~\ref{lem:finite-exhaustion-totalization-moves}, those possibilities are exhaustive. By Proposition~\ref{prop:disposition-covered-mechanisms}, each is blocked or vacuous. Therefore no same-scope standing-extending operator survives.
+\end{proof}
+
+\begin{corollary}[No terminal same-scope totalization]
+There is no universal, terminal, reflective, or best same-scope admissible completion that renders partial operators total on the standing-bearing carrier.
+\end{corollary}
+
+\begin{proof}
+Any such object would itself realize a surviving same-scope totalization strategy, contradicting Theorem~\ref{thm:finite-exhaustion-schema}.
+\end{proof}
+
+\subsection{Conservative extension collapse}
+
+\begin{theorem}[Conservative extension collapse]
+\label{thm:conservative-extension-collapse}
+Relative to the fixed admissible interior, every purported same-scope operator enlargement is of exactly one of the following two kinds.
+\begin{enumerate}
+  \item It is conservative on already admitted content: it adds no new old-tuple values, no new same-scope consequences, and no new standing-bearing content beyond definitional or bookkeeping redescription.
+  \item It depends on external witnesses, evaluators, selectors, generic objects, carrier change, regime enlargement, or fresh same-scope authority, and is therefore not a genuinely internal enlargement of the old scope.
+\end{enumerate}
+In particular, there is no same-scope operator enlargement that is both nonconservative and genuinely internal.
+\end{theorem}
+
+\begin{proof}
+The direct route in which an old primitive acquires new values on old tuples is blocked by Theorem~\ref{thm:no-internal-totalization}. The indirect route in which the apparent effect of an operator is mediated by an auxiliary datum is handled by Theorem~\ref{thm:aux-data-dichotomy}: if the datum is internally fixed, the move is conservative; if it is external, the move is not internal to the base.
+
+It remains to consider admissibility-preserving theory extensions. Here \clausuradoc{} supplies the decisive collapse result: once the old operator behavior on the old carrier is fixed, any conservative standing-bearing extension is definitional/bookkeeping on the old scope. A new symbol, evaluator, or operator-role that genuinely participates in standing-bearing claims must either be explicitly definable from the old language on the old carrier or else rely on operational, semantic, witness-based, or meta-foundational authority not already fixed there. In the first case the extension is definitional bookkeeping; in the second it is not an internal same-scope enlargement at all. No third status remains.
+\end{proof}
+
+\begin{corollary}[Interpretability collapse]
+If an operator symbol, enrichment, or theory extension is uniquely determined by the already fixed operator core on the evaluated fragment, then its same-scope standing-bearing content is definitional bookkeeping rather than new power.
+\end{corollary}
+
+\begin{proof}
+Uniqueness of interpretation relative to the fixed operator core means that the enrichment adds no new same-scope distinctions about what the old base can do. In the standing vocabulary of the capstone, that is exactly the conservative case of Theorem~\ref{thm:conservative-extension-collapse}. So same-scope internal enrichments determined entirely by the existing core are bookkeeping rather than new operator power.
+\end{proof}
+
+\subsubsection*{Inline proof anchor V: operator exhaustion on the standing-bearing carrier}
+
+The operator-closure claim is the conjunction of the graph-rigidity theorem in \sameoperatorsdoc{}, the conservative-extension and interpretability collapse theorems in \clausuradoc{}, and the cleaner fixed-base predecessor in \fixedbasedoc{} \cite{MaleySameScopeOps,MaleyClausura,MaleyFixedBase}. The forcing chain has five steps.
+\begin{enumerate}
+  \item \emph{Old-graph rigidity.} If some old tuple $\bar a\in X^n$ with $\bar a\notin\operatorname{dom}(\omega)$ becomes newly defined in a same-scope carrier-preserving extension, then the graph of an old primitive has changed on old data. That is already a change in the induced old structure on $X$, not a harmless redescription.
+  \item \emph{No same-scope totalization.} A same-scope carrier-preserving extension therefore cannot make a genuinely partial old primitive total on old tuples. The same argument yields no post hoc repair and no deferred admissibility for old undefined applications: changing the timing still changes the old graph.
+  \item \emph{Auxiliary-data dichotomy.} If the apparent effect of an operator $F$ is mediated by an auxiliary datum $a(x)$, then exactly two cases remain. If $a(x)$ is internally fixed over $x$, the operator only reads off structure already fixed by the base and is conservative on old-base-relevant content. If $a(x)$ is not internally fixed, then $F$ depends essentially on an external selector, witness, evaluator, generic object, comparison map, completion rule, or other imported datum and is therefore not internal to the base.
+  \item \emph{Finite exhaustion of totalization and standing-extension moves.} Any same-scope attempt to totalize, complete, or enlarge standing-bearing coverage must instantiate at least one of five covered mechanisms: domain enlargement, carrier collapse, evaluative completion, conservative definitional extension, or non-conservative family change. Each is already blocked or vacuous.
+  \item \emph{Conservative extension collapse.} Once old operator behavior on the old carrier is fixed, every remaining admissibility-preserving same-scope enrichment is either definitional/bookkeeping on the old scope or else depends on fresh same-scope authority, imported witness load, or open regime change. No third same-scope status remains.
+\end{enumerate}
+This is the exact operator-side hinge compressed in Theorems~\ref{thm:no-internal-totalization}, \ref{thm:aux-data-dichotomy}, \ref{thm:finite-exhaustion-schema}, and \ref{thm:conservative-extension-collapse}: same-scope internal strengthening is exhausted by conservative bookkeeping on the old base or explicit dependence on external data, witnesses, evaluators, or carrier change.
+
+\subsection{Closure of the major mathematical operator families}
+
+The point of operator exhaustion is not to deny the mathematical usefulness of ambient methods. It is to classify their fixed-scope status once the admissible interior is already fixed. The families below are not disconnected mini-arguments. They are recurring sites at which the same conservative/external dichotomy reappears.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{0.98\textwidth}{P{0.23\textwidth}P{0.31\textwidth}Y}
+\toprule
+\textbf{Family} & \textbf{Load-bearing datum or move} & \textbf{Fixed-scope status after closure} \\
+\midrule
+Choice and selection & selector rule, ranking, or representative criterion & Conservative only if the relevant selector is already internally fixed; otherwise imported and inadmissible. \\
+Genericity and forcing & generic witness, surrogate evaluator, or transfer criterion & Generic output is external; readback or absoluteness is conservative only when no new same-scope standing-bearing content is added. \\
+Completion and evaluative closure & completion domain, boundary, embedding, or evaluator & Either external by carrier change or conservative on old-base-relevant content if the evaluative rule was already fixed. \\
+Compactness, saturation, and model-theoretic existence & test-family totality, local-to-global rule, larger model, or certifying witness structure & Conservative only in the vacuous/definable case; otherwise external ambient enlargement or witness import. \\
+Universal-property existence & completed comparison totality or universal witness object & Conservative only if the witness is already fixed strongly enough that no new same-scope content is added; otherwise external and typically carrier-changing. \\
+Infinity escalation & completed or exhaustively idealized totality & Explicit regime enlargement rather than internal strengthening of the original base. \\
+Typicality, measure, and probabilistic authorization & comparison class, weighting rule, evaluative carrier, or selector principle & Carrier laundering or boundary-side selection; not a primitive same-scope operator source of standing. \\
+Canonical representatives and quotients & normalization or identification rule & Conservative only if the normalization rule is internally fixed; otherwise selector import or carrier change. \\
+Meta-foundational re-anchoring & standing-conferring meta-criterion or authority & Inadmissible as an operator on the old scope. \\
+Repair and rescue schemes & repair rule, rescue authority, or post hoc standing override & No admissible same-scope instance exists. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\begin{theorem}[Flagship family closure]
+\label{thm:flagship-family-closure}
+Every major mathematical operator family classified above is exhausted by the same fixed-scope dichotomy: the move is either conservative on already admitted content because its load-bearing datum is already internally fixed, or it depends on external data, witness import, carrier change, evaluative completion, or regime enlargement and is therefore not a new same-scope source of standing-bearing power.
+\end{theorem}
+
+\begin{proof}
+Choice and selection reduce to the status of the selector or representative rule: if that rule is already standing-fixed, the move is conservative; if not, it is imported and therefore inadmissible. Genericity and forcing reduce to the status of the generic witness or transfer criterion: direct generic output is external, while readback is conservative only when no new same-scope standing-bearing content is added. Completion reduces to whether the completion domain, boundary, embedding, or evaluator is already fixed; if not, the move is external or carrier-changing. Compactness, saturation, and model-theoretic existence proceed by larger models, realized types, certifying witness structures, or local-to-global rules; unless the witness or comparison totality was already fixed, the move is external. Universal constructions are posed with respect to ambient comparison data and witness objects, so they are conservative only when that witness data was already fixed strongly enough that no new same-scope content is added. Infinity escalation openly changes the regime being measured. Typicality, measure, and probabilistic authorization attempt to turn an evaluative carrier into a same-scope authorizer and are therefore blocked by the no-carriers theorem and by boundary non-parameterization. Canonical representatives and quotients depend on a normalization or identification rule and therefore either collapse to bookkeeping or change carrier. Meta-foundational re-anchoring imports standing-conferring authority rather than generating same-scope standing. Repair schemes are ruled out by the no-repair / no-generator / no-carrier closure package already fixed in Section~\ref{sec:standing-regime}. In every case the result is conservative readback, bookkeeping, external dependence, or regime change --- never a third same-scope source of standing-bearing power.
+\end{proof}
+
+\begin{corollary}[Why the standard detours do not reopen mathematics]
+Forcing, compactness, saturation, completion, choice, typicality, genericity, universal-property existence, model-theoretic existence, canonicalization, meta-foundational re-anchoring, and repair schemes do not reopen mathematics inside the fixed admissible interior. What they yield, when read back to the old base, is either conservative content already fixed there or externally dependent content that is not internal to that base.
+\end{corollary}
+
+\begin{proof}
+This is the direct capstone reading of Theorem~\ref{thm:flagship-family-closure}. The ambient methods remain mathematically legitimate, but their fixed-scope status is exhausted by conservative readback, bookkeeping, and external dependence. Since no third same-scope status remains, they do not reopen the interior.
+\end{proof}
+
+\subsection{Interaction closure: no emergent same-scope family}
+
+\begin{definition}[Audited kernel]
+An \emph{audited kernel} is one of the imported datum types already represented in the family-wise layer: a selector or representative rule, a generic or forcing witness, a completion or total evaluator, a global family of constraints, a global comparison totality, a certifying witness, an infinitary completion surrogate, a weighting class, a privileged identification rule, a repair rule, or a meta-foundational authority.
+\end{definition}
+
+\begin{lemma}[Kernel provenance]
+\label{lem:kernel-provenance}
+Let $F$ be a same-scope operator on admissible input $x\in X$. If $F$ is not bookkeeping-equivalent on $x$, then the action of $F$ depends on at least one audited kernel.
+\end{lemma}
+
+\begin{proof}
+If $F$ is not bookkeeping-equivalent, then by contraposition of Theorem~\ref{thm:aux-data-dichotomy} some datum needed by $F$ is not internally fixed over $x$. Such a non-standing-fixed datum is imported. The family audit above records the possible imported datum types that can do standing-bearing work on the old carrier. Those are exactly the audited kernels listed here. Hence every non-bookkeeping same-scope operator exhibits at least one audited kernel.
+\end{proof}
+
+\begin{lemma}[Bookkeeping is stable under finite composition]
+\label{lem:bookkeeping-stable-under-finite-composition}
+A finite composite of bookkeeping-equivalent same-scope stages is bookkeeping-equivalent.
+\end{lemma}
+
+\begin{proof}
+Each bookkeeping-equivalent stage changes presentation only and adds no new operator power on the carrier it receives. Composing finitely many such stages still changes presentation only. Hence the composite is bookkeeping-equivalent.
+\end{proof}
+
+\begin{theorem}[Composition and alternation closure]
+\label{thm:composition-alternation-closure}
+No finite composition, alternation, or same-scope pipeline assembled from same-scope operators creates a new admissible operator family. If a composite is not bookkeeping-equivalent, then some stage already instantiates an audited kernel, and the composite is therefore either a rebranded registry family or inadmissible.
+\end{theorem}
+
+\begin{proof}
+Let
+\[
+F=F_n\circ F_{n-1}\circ\cdots\circ F_1
+\]
+be a finite same-scope pipeline on admissible input $x$. If every stage is bookkeeping-equivalent on the input it receives, then $F$ is bookkeeping-equivalent by Lemma~\ref{lem:bookkeeping-stable-under-finite-composition}. Assume instead that $F$ is not bookkeeping-equivalent. Choose the least index $j$ such that the prefix
+\[
+F_j\circ\cdots\circ F_1
+\]
+is not bookkeeping-equivalent. Then the shorter prefix $F_{j-1}\circ\cdots\circ F_1$ is bookkeeping-equivalent, so the first standing-relevant departure occurs at stage $F_j$. By Lemma~\ref{lem:kernel-provenance}, stage $F_j$ already depends on an audited kernel. Later stages can only propagate, rename, or mask that kernel; they cannot turn it into a genuinely new same-scope family. Hence the composite is either a rebranded registry family or inadmissible.
+\end{proof}
+
+\begin{theorem}[Iteration, self-reference, and transfer closure]
+\label{thm:iteration-selfref-transfer-closure}
+No staged or iterative procedure, no same-scope diagonal or self-referential construction, and no representation-change, foundation-swap, absoluteness, or transfer maneuver creates a new admissible same-scope operator family.
+\end{theorem}
+
+\begin{proof}
+If alleged novelty appears at some finite stage of an iterative procedure, then a finite prefix is already non-bookkeeping, and Theorem~\ref{thm:composition-alternation-closure} reduces the novelty to an audited kernel already present at that stage. If every finite stage is bookkeeping-equivalent and novelty is claimed only in an eventual output, then some extra datum is needed to turn the stagewise trace into a standing-bearing result. That datum can only be a completion or total evaluator, an infinitary or idealized passage, a forcing or genericity move, a weighting or stabilization criterion, or a repair of nonstanding intermediate stages --- all already closed by Theorem~\ref{thm:flagship-family-closure} and Theorem~\ref{thm:finite-exhaustion-schema}.
+
+A nontrivial diagonal or self-referential maneuver must choose a privileged code or representative, totalize a self-applied evaluator, certify the result by a witness structure or meta-authority, or pass to an infinite or completed object not locally generated at the point of action. Those possibilities are exactly the already closed families of choice/canonicalization, completion, model-theoretic existence, infinity escalation, and meta-foundational re-anchoring. If none of those occur, the construction is only a self-map inside the fixed regime and therefore collapses, after normalization, to bookkeeping identity capture rather than a new operator source.
+
+Finally, if a purported operator moves from one representational regime to another and back again on a shared same-scope domain, then either the round trip is admissible on a normalization-fixed overlap, in which case it changes presentation only and is bookkeeping, or else it depends on a privileged interpretation, selector, witness, or authority not fixed by the overlap. That is imported standing-bearing load and is inadmissible. Hence representation change, foundation swap, absoluteness, and transfer never create a new same-scope admissible family.
+\end{proof}
+
+\begin{theorem}[No admissible emergent family]
+\label{thm:no-emergent-family}
+No emergent operator family is admissible. Equivalently, no same-scope family not already audited in the family-wise registry can acquire standing-bearing force merely by hidden-kernel disguise, composition, iteration, diagonalization, representation change, foundation swap, absoluteness, or transfer among already closed families.
+\end{theorem}
+
+\begin{proof}
+Let $F$ be a purported emergent same-scope operator family. If a genuinely non-bookkeeping member of $F$ exists, then by Lemma~\ref{lem:kernel-provenance} it exhibits an audited kernel. If that kernel is already one of the named registry families, then $F$ is merely that family under redescription. If novelty is instead claimed to arise from assembly rather than from a primitive kernel, then Theorems~\ref{thm:composition-alternation-closure} and \ref{thm:iteration-selfref-transfer-closure} show that the assembly is bookkeeping or inadmissible. Thus no same-scope admissible family remains outside the registry.
+\end{proof}
+
+\subsection{Mathematics closure}
+
+\begin{theorem}[Mathematics closure]
+\label{thm:mathematics-closure}
+Mathematics, treated as an operator system under admissibility, is closed by exhaustion. Equivalently, once the admissible interior is fixed, no same-scope operator family can generate new standing-bearing mathematical content beyond conservative readback, bookkeeping-equivalent refinement, or explicit scope change.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:no-internal-totalization} blocks the direct route in which old partiality is totalized on the old standing-bearing carrier. Theorem~\ref{thm:finite-exhaustion-schema} then shows that every same-scope totalization or standing-extension attempt falls under one of the five covered mechanisms and is blocked or vacuous. Theorem~\ref{thm:conservative-extension-collapse} classifies every remaining apparent operator enlargement as conservative bookkeeping or external dependence. Theorem~\ref{thm:flagship-family-closure} shows that the major mathematical operator families instantiate no further same-scope case beyond that dichotomy. Theorem~\ref{thm:no-emergent-family} closes the last loophole by ruling out interaction-generated novelty. Therefore mathematics, as an admissible operator system, is closed by exhaustion.
+\end{proof}
+
+\begin{corollary}[What survives mathematics after closure]
+After closure, mathematics is not empty and not dispensable. What remains is internally fixed, standing-preserving structural coordination within the already closed admissible interior: refinement, lawful redescription, definitional enrichment, invariant readback, proof, mapping, and disciplined transformation that do not claim new same-scope standing-bearing power.
+\end{corollary}
+
+\begin{proof}
+The closure theorem blocks same-scope standing-generative enlargement, not standing-preserving work inside the already admitted interior. Conservative readback, definitional redescription, invariant comparison, and proof remain legitimate because they do not add new old-base-relevant standing-bearing content. This is exactly the post-closure classification of mathematics drawn from \clausuradoc{} and restated in capstone form by \eademdoc{}: mathematics survives as internally fixed standing-preserving structural coordination, not as a standing-generative foundation.
+\end{proof}
+
